@@ -26,12 +26,12 @@
           <div class="small-box" style="background:linear-gradient(to bottom, #662D8C  0%, #ED1E79  100%);">
             <div class="inner"><br>
                <h3 style="font-size:20px;margin-left:5px;color:#fff;">Quick Registration</h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
-              <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/student.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
+              <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/student.png" style="width:80px;margin-bottom:20px;" alt="Blue morpho PVT LTD"  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/student_registration')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/student_registration')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
@@ -40,13 +40,13 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box" style="background:linear-gradient(to bottom, #FB872B  0%, #D9E021 100%);">
             <div class="inner"><br>
-               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo $language['Registration List']; ?></h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo 'Registration List'; ?></h3>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
               <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/enquiry_list.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/student_registration_list')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/student_registration_list')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
@@ -55,13 +55,13 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box" style="background:linear-gradient(to bottom, #00537E 0%, #3AA17E 100%);">
             <div class="inner"><br>
-               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo $language['Admission List']; ?></h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo 'Admission List'; ?></h3>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
               <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/reminder_list.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/student_admission_list')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/student_admission_list')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
@@ -74,13 +74,13 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box" style="background:linear-gradient(to bottom, #45145A  0%, #FF5300 100%);">
             <div class="inner"><br>
-               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo $language['Assign Rfid Card']; ?></h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo 'Assign Rfid Card'; ?></h3>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
               <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/student_rfid.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/rfid_card_generate')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/rfid_card_generate')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
@@ -89,13 +89,13 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box" style="background:linear-gradient(to bottom, #00FFA1  0%, #00FFFF 100%);">
             <div class="inner"><br>
-               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo $language['Roll No Generate']; ?></h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+               <h3 style="font-size:20px;margin-left:5px;color:#fff;"><?php echo 'Roll No Generate'; ?></h3>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
               <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/new_admission.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/student_roll_no')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/student_roll_no')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
@@ -106,13 +106,13 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box" style="background:linear-gradient(to bottom, #3A3897   0%, #A3A1FF 100%);">
             <div class="inner"><br>
-               <h3 style="font-size:20px;margin-left:5px;color:#fff;">Student <?php echo $language['Id Generate']; ?></h3>
-				<p style="margin-left:10px;color:#fff;"><?php echo $language['Enter']; ?></p>
+               <h3 style="font-size:20px;margin-left:5px;color:#fff;">Student <?php echo 'Id Generate'; ?></h3>
+				<p style="margin-left:10px;color:#fff;"><?php echo 'Enter'; ?></p>
             </div>
             <div class="icon">
               <i class="ion"><img src="<?php echo $coaching_software_path; ?>images/idcard.png" style="width:80px;margin-bottom:20px;" alt="Simption Tech Pvt Ltd "  title="School Management System" class="image1"></i>
             </div>
-            <a href="javascript:get_content('student/student_id_card')" class="small-box-footer"><?php echo $language['More info']; ?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="javascript:get_content('student/student_id_card')" class="small-box-footer"><?php echo 'More info'; ?> <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		</a>
