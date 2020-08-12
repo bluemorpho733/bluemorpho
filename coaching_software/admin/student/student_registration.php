@@ -8,13 +8,13 @@ $que11="select * from login";
 
    <section class="content-header">
       <h1>
-        <?php echo $language['Student Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        <?php echo 'Student Management'; ?>
+        <small><?php echo 'Control Panel'; ?></small>
       </h1>
       <ol class="breadcrumb">
 		 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
-	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo $language['Student']; ?></a></li>
-	  <li class="active"><?php echo $language['Student Registration']; ?></li>
+	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo 'Student'; ?></a></li>
+	  <li class="active"><?php echo 'Student Registration'; ?></li>
       </ol>
     </section>
 	  
@@ -204,21 +204,21 @@ $registration_id=$row['registration_id'];
 				</div>
 				<div class="col-md-3 ">
 					<div class="form-group">
-						<label><?php echo $language['Father Name']; ?></label>
-						<input type="text"  name="student_father_name" id="p" placeholder="<?php echo $language['Father Name']; ?>"  value="" class="form-control new_student">
+						<label><?php echo 'Father Name'; ?></label>
+						<input type="text"  name="student_father_name" id="p" placeholder="<?php echo 'Father Name'; ?>"  value="" class="form-control new_student">
 					</div>
 			    </div>
 		
 		
 				<div class="col-md-3 ">	
 					<div class="form-group" >
-					  <label><?php echo $language['Date Of Birth']; ?><font style="color:red"><b>*</b></font></label>
+					  <label><?php echo 'Date Of Birth'; ?><font style="color:red"><b>*</b></font></label>
 					  <input type="date"  name="student_date_of_birth" value="" class="form-control new_student" required>
 					</div>
 				</div>
 				<div class="col-md-3">				
 					<div class="form-group" >
-					  <label ><?php echo $language['Gender']; ?></label><br>
+					  <label ><?php echo 'Gender'; ?></label><br>
                       <select class="form-control new_student" name="student_gender" id="student_gender">
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
@@ -229,7 +229,7 @@ $registration_id=$row['registration_id'];
 				</div>
 				<div class="col-md-3 ">				
 					<div class="form-group" >
-					  <label ><?php echo $language['Date Of Admission']; ?></label>
+					  <label ><?php echo 'Date Of Admission'; ?></label>
 					  <input type="date"  name="student_date_of_admission" placeholder=""  value="<?php echo date('Y-m-d') ?>" class="form-control">
 					</div>
 				</div>	
@@ -241,7 +241,7 @@ $registration_id=$row['registration_id'];
 				</div>
 				<div class="col-md-2">	
 					<div class="form-group">
-					  <label><?php echo $language['Student Photo']; ?></label>
+					  <label><?php echo 'Student Photo'; ?></label>
 					  <input type="file" name="student_image" id="student_image" placeholder="" onchange="check_file_type(this,'student_image','show_student_photo','image');" class="form-control" accept=".gif, .jpg, .jpeg, .png" value="">
 					</div>
 				</div>
@@ -295,7 +295,7 @@ $registration_id=$row['registration_id'];
 				
 				<div class="col-md-12">
 					<div class="col-md-8">	
-						<label><input type="checkbox" name="myCheck" id="myCheck"  onclick="myFunction()">&nbsp;&nbsp;&nbsp;<?php echo $language['Check For Message']; ?></label>
+						<label><input type="checkbox" name="myCheck" id="myCheck"  onclick="myFunction()">&nbsp;&nbsp;&nbsp;<?php echo 'Check For Message'; ?></label>
 						<div class="form-group" id="text" style="display:none">
 					  <input type="text" name="sms" placeholder="" id="contact"  class="form-control">
 					  <input type="hidden" name="send_sms" placeholder="" id="send_sms"  class="form-control">
@@ -303,7 +303,7 @@ $registration_id=$row['registration_id'];
 					</div>
 				</div>
 				<div class="col-md-12">
-				<center><input type="submit" name="finish" onclick="return valid();" value="<?php echo $language['Submit']; ?>" class="btn my_background_color" /></center>
+				<center><input type="submit" name="finish" onclick="return valid();" value="<?php echo 'Submit'; ?>" class="btn my_background_color" /></center>
 				</div>
 				
 		
