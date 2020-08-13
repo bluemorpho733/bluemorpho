@@ -37,7 +37,7 @@ Application,Teacher Android Application,Bus Driver Android Application." />
 
 <meta property="og:url"           content="http://www.simption.com" />
 	<meta property="og:type"          content="website" />
-	<meta property="og:title"         content="Simption Management Software" />
+	<meta property="og:title"         content="BlueMorpho Management Software" />
 	<meta property="og:description"   content="Simption Management Software is a best software For Management. Simption  Software Contains various panel like Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
 Application,Teacher Android Application,Bus Driver Android Application." />
 	<meta property="og:image"         content="https://lh3.googleusercontent.com/-bJcXHC79Mdo/WGzq4GKuqiI/AAAAAAAAAfQ/IzvLYf3eib0gTEPzMP5TayWQtE8RhicCwCJoC/w426-h298/simptionbanner.jpg" /> 
