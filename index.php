@@ -9,20 +9,20 @@ session_start();
 		
 		<meta name="keywords" content="Coaching Management Software, Hostel management Software, best Hostel Software, Coaching Hostel Software, Hostel ERP Software, Hostel Student management Software, Hostel management"/>
        
-	   <meta name="description" content="Simption Tech Pvt Ltd Provides a Coaching management Software That Contains Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
+	   <meta name="description" content="BlueMorpho Tech Pvt Ltd Provides a Coaching management Software That Contains Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
        Application,Teacher Android Application,Bus Driver Android Application."/>
 
     <link rel="shortcut icon" type="image/icon" href="coaching_software/images/favicon.png"/>
 	
-	<meta property="article:publisher" content="https://www.facebook.com/simptiontechpvtltd/" />
+	<meta property="article:publisher" content="https://www.facebook.com/BlueMorphotechpvtltd/" />
 	<meta name="msvalidate.01" content="C676B6D610F3665D3D6AFE5BFA86FAC5" />
-<meta name="twitter:site" content="@simption_tech" />
+<meta name="twitter:site" content="@BlueMorpho_tech" />
 <META NAME="ROBOTS" CONTENT="ALL">
-<meta name="author" content="Simption Tech Pvt Ltd">
-<meta name="designer" content="http://www.simption.com">
+<meta name="author" content="BlueMorpho Tech Pvt Ltd">
+<meta name="designer" content="http://www.BlueMorpho.com">
 <meta name="robots" content="default, follow, all">
 <meta name="rating" content="General">
-<meta name="classification" content="Simption Management Software"/>
+<meta name="classification" content="BlueMorpho Management Software"/>
 <meta name="Language" content="us-en"/> 
 <meta name="Audience" content="All"/> 
 <meta name="distribution" content="Global"/> 
@@ -30,17 +30,17 @@ session_start();
 <meta name="Revisit-After" content="1 days"/> 
 <meta name="google-site-verification" content="googleffc254dfcdc26a00" />
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<meta name="category" content="Simption  Management Software is a best software For Management. Simption Coaching Software Contains various panel like Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
+<meta name="category" content="BlueMorpho  Management Software is a best software For Management. BlueMorpho Coaching Software Contains various panel like Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
 Application,Teacher Android Application,Bus Driver Android Application." />
- <link rel="canonical" href="http://simptiontechpvtltd.blogspot.in/2017/07/new-latest-gst-software-updated-for.html"/>
+ <link rel="canonical" href="http://BlueMorphotechpvtltd.blogspot.in/2017/07/new-latest-gst-software-updated-for.html"/>
    
 
-<meta property="og:url"           content="http://www.simption.com" />
+<meta property="og:url"           content="http://www.BlueMorpho.com" />
 	<meta property="og:type"          content="website" />
 	<meta property="og:title"         content="BlueMorpho Management Software" />
-	<meta property="og:description"   content="BlueMorpho Management Software is a best software For Management. Simption  Software Contains various panel like Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
+	<meta property="og:description"   content="BlueMorpho Management Software is a best software For Management. BlueMorpho  Software Contains various panel like Student management, Hostel management Software,Fees Management,Staff Management,Examination Management ,Attendance Management ,Account Management,Enquiry Management,Reminder Management ,Homework Management,Time Table Management,Complaint Management,SMS Service,Gallery,Stock Management,Certificate Management,Govt. Requirements,Leave Management ,Holiday Management ,Paper Setter,Sports Management ,Event Management ,Downloads,Bus Management ,Session Management,Library Management ,Hostel Management,Backup Management,Offline Facility,Teacher Panel,Account Panel,Library Panel,Bus Panel,Hostel Panel,Management Panel,Student/Parent Android
 Application,Teacher Android Application,Bus Driver Android Application." />
-	<meta property="og:image"         content="https://lh3.googleusercontent.com/-bJcXHC79Mdo/WGzq4GKuqiI/AAAAAAAAAfQ/IzvLYf3eib0gTEPzMP5TayWQtE8RhicCwCJoC/w426-h298/simptionbanner.jpg" /> 
+	<meta property="og:image"         content="https://lh3.googleusercontent.com/-bJcXHC79Mdo/WGzq4GKuqiI/AAAAAAAAAfQ/IzvLYf3eib0gTEPzMP5TayWQtE8RhicCwCJoC/w426-h298/BlueMorphobanner.jpg" /> 
  
  <link rel="stylesheet" href="coaching_software/assests/css/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="coaching_software/assests/css/font-awesome/css/font-awesome.min.css">
