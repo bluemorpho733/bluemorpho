@@ -79,20 +79,20 @@ check_value.push($(this).val());
 $("#my_subject_name").val(check_value);
 }
 
-function valid(){
-var month=0;
-$('.subject').each(function() {
-if($(this).prop('checked')==true){
-month = Number(parseInt(month)+1);
-}
-});
-if (month>0) {
-	return true;
-}else{
-	alert("Please Select Atleast One Subject !!!");
-	return false;
-}
-}
+// function valid(){
+// var month=0;
+// $('.subject').each(function() {
+// if($(this).prop('checked')==true){
+// month = Number(parseInt(month)+1);
+// }
+// });
+// if (month>0) {
+// 	return true;
+// }else{
+// 	alert("Please Select Atleast One Subject !!!");
+// 	return false;
+// }
+// }
 
 	function sms_contact(value1){
        
@@ -270,13 +270,13 @@ $registration_id=$row['registration_id'];
 					</div>
 				</div>
 				
-				<div class="col-md-12">
+				<!-- <div class="col-md-12">
 				<div class="col-md-3" style="float:right;">
 				<input type="checkbox" name="" id="subject" onclick="for_check(this.id);" class="" value="" /> <span style="color:red;">All Check / Uncheck</span>
 				</div>
-				</div>
+				</div> -->
 				
-				<div class="col-md-12">
+				<!-- <div class="col-md-12">
 				<div class="col-md-10 col-md-offset-1" style="height: 50px;border:1px solid;border-radius:20px;" id="subject_detail">
 				<?php
 				$query="select * from coaching_courses_subject";
@@ -290,10 +290,10 @@ $registration_id=$row['registration_id'];
 				</div>
 				<?php } ?>
 				</div>
-				</div>				
+				</div>				 -->
 				
 				
-				<div class="col-md-12">
+				<!-- <div class="col-md-12">
 					<div class="col-md-8">	
 						<label><input type="checkbox" name="myCheck" id="myCheck"  onclick="myFunction()">&nbsp;&nbsp;&nbsp;<?php echo 'Check For Message'; ?></label>
 						<div class="form-group" id="text" style="display:none">
@@ -301,9 +301,11 @@ $registration_id=$row['registration_id'];
 					  <input type="hidden" name="send_sms" placeholder="" id="send_sms"  class="form-control">
 						</div>
 					</div>
-				</div>
+				</div> -->
+
+
 				<div class="col-md-12">
-				<center><input type="submit" name="finish" onclick="return valid();" value="<?php echo 'Submit'; ?>" class="btn my_background_color" /></center>
+				<center><input type="submit" name="finish" value="<?php echo 'Submit'; ?>" class="btn my_background_color" /></center>
 				</div>
 				
 		
