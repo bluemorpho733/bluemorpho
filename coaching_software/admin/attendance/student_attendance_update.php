@@ -60,14 +60,14 @@ $('#parents_message_'+id).val(value2);
     <!-- Content Header (Page header) -->
         <section class="content-header">
        <h1>
-        <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-		 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-		  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-		  <li><a href="javascript:get_content('attendance/student_attendance_select')"><i class="fa fa-child"></i> <?php echo $language['Student Attendance Select']; ?></a></li>
-		 <li class="active"><?php echo $language['Student Attendance Update']; ?></li>
+		 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+		  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+		  <li><a href="javascript:get_content('attendance/student_attendance_select')"><i class="fa fa-child"></i> Student Attendance Select</a></li>
+		 <li class="active">Student Attendance Update</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -114,7 +114,7 @@ $('#parents_message_'+id).val(value2);
 	<input type="hidden" name="student_subject" id="student_subject" value="<?php echo $student_subject; ?>"  />
         <div class="box">
             <div class="box-header">
-              <div class="col-md-3"><h3 class="box-title"><?php echo $language['Student Attendance']; ?></h3></div>
+              <div class="col-md-3"><h3 class="box-title">Student Attendance</h3></div>
               <div class="col-md-5"><span style="font-weight:bold; float:right;">ORDER BY : </span></div>
               <div class="col-md-4">
                   <div class="col-md-3"><input type="radio" name="order_by" class="att_order" value="P" onclick="change_date();" <?php if(isset($_GET['radiovalue'])){ if($_GET['radiovalue']=='P'){ echo 'checked'; } } ?> /> <b>P</b></div>
@@ -126,7 +126,7 @@ $('#parents_message_'+id).val(value2);
             <!-- /.box-header -->
             <div class="box-body ">
               <div class="col-md-12">
-			  <div class="col-md-6"><h4><?php echo $language['Attendance Date']; ?> : <?php echo $attendance_student_date3; ?></h4></div>
+			  <div class="col-md-6"><h4>Attendance Date : <?php echo $attendance_student_date3; ?></h4></div>
 			  <div class="col-md-4"><h4>Courses : <?php echo $courses_name; ?> / <?php echo 'Subject'; ?> : '<?php echo $subject_name; ?>'</h4></div>
 			  <div class="col-md-2">
 			  <label>Change Date :</label>
@@ -158,11 +158,11 @@ $('#parents_message_'+id).val(value2);
 			  <table id="example1" class="table table-bordered table-striped">
                 <thead class="my_background_color">
                 <tr>
-                  <th><?php echo $language['S No']; ?></th>
-                  <th><?php echo $language['Student Name']; ?></th>
-                  <th><?php echo $language['Class Roll No']; ?></th>
-                  <th><?php echo $language['Student Attendance']; ?></th>
-                  <th><?php echo $language['Student Intime']; ?></th>
+                  <th>S No</th>
+                  <th>Student Name</th>
+                  <th>Class Roll No</th>
+                  <th>Student Attendance</th>
+                  <th>Student Intime</th>
                   <th><input type="checkbox" id="selection" onclick="for_check(this.id);" /> #</th>
                 </tr>
                 </thead>
@@ -259,7 +259,7 @@ $('#parents_message_'+id).val(value2);
               </table>
 			  </div>
 			  <div class="col-md-12">
-			  <center><button type="submit" name="submit1" id="submitButtonId" class="btn btn-primary"><?php echo $language['Submit']; ?></button></center>
+			  <center><button type="submit" name="submit1" id="submitButtonId" class="btn btn-primary">Submit</button></center>
 			  </div>
             </div>
             <!-- /.box-body -->

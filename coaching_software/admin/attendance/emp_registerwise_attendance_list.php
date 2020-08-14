@@ -17,14 +17,14 @@ var data12="staff_type="+staff_type+"&date="+new_date;
 
     <section class="content-header">
       <h1>
-         <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+         Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
+	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
 	  <li><a href="javascript:get_content('attendance/emp_registerwise_attendance_select')"><i class="fa fa-child"></i> Employee Registerwise Attendance Select</a></li>
-	 <li class="active"><?php echo $language['Employee Attendance List']; ?></li>
+	 <li class="active">Employee Attendance List</li>
       </ol>
     </section>
 	<!---*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-->
@@ -51,30 +51,30 @@ var data12="staff_type="+staff_type+"&date="+new_date;
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">
-					  <label><?php echo $language['Month']; ?> : </label>
+					  <label>Month : </label>
 					  <select name="staff_attendance_month" id="staff_attendance_month" onchange="attendance_list(this.value);" class="form-control">
-					  <option <?php if($current_month2=='04'){ echo "selected"; } ?> value="04"><?php echo $language['April']; ?></option>
-					  <option <?php if($current_month2=='05'){ echo "selected"; } ?> value="05"><?php echo $language['May']; ?></option>
-					  <option <?php if($current_month2=='06'){ echo "selected"; } ?> value="06"><?php echo $language['June']; ?></option>
-					  <option <?php if($current_month2=='07'){ echo "selected"; } ?> value="07"><?php echo $language['July']; ?></option>
-					  <option <?php if($current_month2=='08'){ echo "selected"; } ?> value="08"><?php echo $language['August']; ?></option>
-					  <option <?php if($current_month2=='09'){ echo "selected"; } ?> value="09"><?php echo $language['September']; ?></option>
-					  <option <?php if($current_month2=='10'){ echo "selected"; } ?> value="10"><?php echo $language['October']; ?></option>
-					  <option <?php if($current_month2=='11'){ echo "selected"; } ?> value="11"><?php echo $language['November']; ?></option>
-					  <option <?php if($current_month2=='12'){ echo "selected"; } ?> value="12"><?php echo $language['December']; ?></option>
-					  <option <?php if($current_month2=='01'){ echo "selected"; } ?> value="01"><?php echo $language['January']; ?></option>
-					  <option <?php if($current_month2=='02'){ echo "selected"; } ?> value="02"><?php echo $language['February']; ?></option>
-					  <option <?php if($current_month2=='03'){ echo "selected"; } ?> value="03"><?php echo $language['March']; ?></option>
+					  <option <?php if($current_month2=='04'){ echo "selected"; } ?> value="04">April</option>
+					  <option <?php if($current_month2=='05'){ echo "selected"; } ?> value="05">May</option>
+					  <option <?php if($current_month2=='06'){ echo "selected"; } ?> value="06">June</option>
+					  <option <?php if($current_month2=='07'){ echo "selected"; } ?> value="07">July</option>
+					  <option <?php if($current_month2=='08'){ echo "selected"; } ?> value="08">August</option>
+					  <option <?php if($current_month2=='09'){ echo "selected"; } ?> value="09">September</option>
+					  <option <?php if($current_month2=='10'){ echo "selected"; } ?> value="10">October</option>
+					  <option <?php if($current_month2=='11'){ echo "selected"; } ?> value="11">November</option>
+					  <option <?php if($current_month2=='12'){ echo "selected"; } ?> value="12">December</option>
+					  <option <?php if($current_month2=='01'){ echo "selected"; } ?> value="01">January</option>
+					  <option <?php if($current_month2=='02'){ echo "selected"; } ?> value="02">February</option>
+					  <option <?php if($current_month2=='03'){ echo "selected"; } ?> value="03">March</option>
 					  </select>
 					  <input type="hidden" name="current_year" id="current_year" value="<?php echo $year; ?>" />
 					  <input type="hidden" name="staff_type" id="staff_type" value="<?php echo $staff_type; ?>" />
 			  </h3>
-			  <button style="width:100px;" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
- <button style="width:100px;" type="button" class="btn "><?php echo $language['Not Filled']; ?></button>
+			  <button style="width:100px;" type="button" class="btn btn-primary">Present</button>
+ <button style="width:100px;" type="button" class="btn btn-danger">Absent</button>
+ <button style="width:100px;" type="button" class="btn btn-warning">Leave</button>
+ <button style="width:100px;" type="button" class="btn btn-info">Holiday</button>
+ <button style="width:100px;" type="button" class="btn btn-success">Sunday</button>
+ <button style="width:100px;" type="button" class="btn ">Not Filled</button>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
@@ -109,16 +109,16 @@ var data12="staff_type="+staff_type+"&date="+new_date;
 					   $month_wise="December";
 				?>
                 <tr>
-                  <th><?php echo $language['Unique Id']; ?></th>
-                  <th><?php echo $language['Staff Name']; ?></th>
-                  <th><span id="by_month"><?php echo $month_wise; ?></span> <?php echo $language['Month Attendance']; ?></th>
-                  <th><?php echo $language['Staff Type']; ?> : <?php echo $staff_type; ?></th>
+                  <th>Unique Id</th>
+                  <th>Staff Name</th>
+                  <th><span id="by_month"><?php echo $month_wise; ?></span> Month Attendance</th>
+                  <th>Staff Type : <?php echo $staff_type; ?></th>
                 </tr>
                 </thead>
                 <tbody id="stud_list">
                 <tr>
                   <td>&nbsp;</td>
-				  <td><button type="button" class="btn btn-success"><?php echo $language['Date']; ?> : </button></td>
+				  <td><button type="button" class="btn btn-success">Date : </button></td>
 				  <td colspan="2">
 				  <?php
 				  $date0=explode('-',$date);
@@ -132,11 +132,11 @@ var data12="staff_type="+staff_type+"&date="+new_date;
 				  ?>
 				 <button style="width:25px;padding-left:5px" type="button" class="btn btn-success"><?php echo $a; ?></button>
 				  <?php } ?>
-				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
-				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
-				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
-                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
-				     <button style="width:50px;padding-left:1px" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
+				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary">Present</button>
+				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger">Absent</button>
+				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning">Leave</button>
+                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info">Holiday</button>
+				     <button style="width:50px;padding-left:1px" type="button" class="btn btn-success">Sunday</button>
                     <button style="width:50px;padding-left:1px" type="button" class="btn ">N Fill</button>
 				  </td>
 				</tr>

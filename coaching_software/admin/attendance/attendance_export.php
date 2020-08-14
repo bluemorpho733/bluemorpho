@@ -140,8 +140,8 @@
 					?>
 					<tr>
 					<td><?php echo $serial_no; ?></td>
-					<td><?php echo $row['attendance_name']; ?></td>
-					<td><?php echo $row['attendance_class']; ?> (<?php echo $row['attendance_section']; ?>)</td>
+					<td><?php echo $row['attendance_name</td>
+					<td><?php echo $row['attendance_class (<?php echo $row['attendance_section)</td>
 					
 				<?php 
 	              $total_present=0;

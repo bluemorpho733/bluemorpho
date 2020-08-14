@@ -8,9 +8,9 @@
         <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/emp_attendance_select')"><i class="fa fa-child"></i> <?php echo $language['Employee Attendance Select']; ?></a></li>
+	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+	  <li><a href="javascript:get_content('attendance/emp_attendance_select')"><i class="fa fa-child"></i> Employee Attendance Select</a></li>
 	  <li><a href="javascript:get_content('attendance/emp_registerwise_attendance_select')"><i class="fa fa-child"></i> Registerwise</a></li>
 	 <li class="active">Employee Attendance View</li>
       </ol>
@@ -42,12 +42,12 @@
 					  <input type="hidden" name="staff_type" id="staff_type" value="<?php echo $staff_type; ?>" />
 					  <input type="text" name="staff_id" id="staff_id" value="<?php echo $staff_id; ?>" style="display:none;" />
 			  </h3>
- <button style="width:100px;" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
- <button style="width:100px;" type="button" class="btn "><?php echo $language['Not Filled']; ?></button>
+ <button style="width:100px;" type="button" class="btn btn-primary">Present</button>
+ <button style="width:100px;" type="button" class="btn btn-danger">Absent</button>
+ <button style="width:100px;" type="button" class="btn btn-warning">Leave</button>
+ <button style="width:100px;" type="button" class="btn btn-info">Holiday</button>
+ <button style="width:100px;" type="button" class="btn btn-success">Sunday</button>
+ <button style="width:100px;" type="button" class="btn ">Not Filled</button>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
@@ -62,7 +62,7 @@
                 </thead>
                 <tbody id="stud_list">
                 <tr>
-				  <td><button type="button" class="btn btn-success"><?php echo $language['Date']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
+				  <td><button type="button" class="btn btn-success">Date <i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
 				  <td colspan="3">
 				  <?php
 				  
@@ -76,11 +76,11 @@
 				  ?>
 			  <button style="width:25px;padding-left:5px" type="button" class="btn btn-success"><?php echo $a; ?></button>
 				  <?php } ?>
-				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
-				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
-				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
-                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
-                   <button style="width:50px;padding-left:1px" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
+				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary">Present</button>
+				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger">Absent</button>
+				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning">Leave</button>
+                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info">Holiday</button>
+                   <button style="width:50px;padding-left:1px" type="button" class="btn btn-success">Sunday</button>
                     <button style="width:50px;padding-left:1px" type="button" class="btn ">N Fill</button>
 				  </td>
 				</tr>

@@ -69,13 +69,13 @@ $.ajax({
 
       <section class="content-header">
       <h1>
-         <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+         Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-		 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-	  <li class="active">  <?php echo $language['Employee RFID Attendance']; ?></li>
+		 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+	  <li class="active">  Employee RFID Attendance</li>
       </ol>
     </section>
 	<!---*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-->
@@ -86,7 +86,7 @@ $.ajax({
 	       <!-- general form elements disabled -->
           <div class="box box-primary my_border_top">
             <div class="box-header with-border ">
-              <div class="col-md-8"><h3 class="box-title"><?php echo $language['RFID Attendance']; ?></h3></div>
+              <div class="col-md-8"><h3 class="box-title">RFID Attendance</h3></div>
 			  <div class="col-md-4"><button type="button" class="btn my_background_color" style="float:right;" onclick="attendance_detail();">Refresh List</button></div>
             </div>
             <!-- /.box-header -->
@@ -98,22 +98,22 @@ $.ajax({
                 <table id="table-data" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th><?php echo $language['Enter RFID No']; ?></th>
+                  <th>Enter RFID No</th>
                 </tr>
                 </thead>
 				<tbody>
 					<tr>
 					<input type="hidden" id="hidden_rfid">
-					<td><input type="text" name="rfid_no" id="rfid_no" placeholder="<?php echo $language['Enter RFID No']; ?>" autofocus required value="" oninput="check_same(this.value);" onchange="set_attendance(this.value);" autocomplete="off"></td>
+					<td><input type="text" name="rfid_no" id="rfid_no" placeholder="Enter RFID No" autofocus required value="" oninput="check_same(this.value);" onchange="set_attendance(this.value);" autocomplete="off"></td>
 					</tr>
 					<tr>
 					<td>&nbsp;</td>
 					</tr>
 					<tr>
 					<td>
-					<label><?php echo $language['Employee Name']; ?> </label>
+					<label>Employee Name </label>
 					  <select name="" id="select_rfid_no" class="form-control select2" onchange="fill_detail(this.value);" style="width:100%;">
-					  <option value=""><?php echo $language['Select Employee']; ?></option>
+					  <option value="">Select Employee</option>
 					        <?php
 							$qry="select * from employee_info where emp_status='Active' and emp_rf_id_no!=''";
 							$rest=mysqli_query($conn37,$qry);
@@ -135,7 +135,7 @@ $.ajax({
                     <tr>
 					<td>
 					<div class="form-group">
-					<label><input type="checkbox" name="myCheck" id="myCheck" onclick="myFunction();">&nbsp;&nbsp;&nbsp;<?php echo $language['Check For Present Employee Message']; ?></label>
+					<label><input type="checkbox" name="myCheck" id="myCheck" onclick="myFunction();">&nbsp;&nbsp;&nbsp;Check For Present Employee Message</label>
 				    <div class="form-group" id="text" style="display:none">
 					
 					  <input type="text" name="sms" placeholder="" id="contact"  class="form-control">

@@ -44,14 +44,14 @@ post_content('attendance/emp_attendance_update',data12);
 	</script>
       <section class="content-header">
       <h1>
-         <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+         Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/emp_attendance_select')"><i class="fa fa-child"></i> <?php echo $language['Employee Attendance Select']; ?></a></li>
-	 <li class="active"><?php echo $language['Employee Attendance Update']; ?></li>
+	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+	  <li><a href="javascript:get_content('attendance/emp_attendance_select')"><i class="fa fa-child"></i> Employee Attendance Select</a></li>
+	 <li class="active">Employee Attendance Update</li>
       </ol>
     </section>
 
@@ -86,7 +86,7 @@ post_content('attendance/emp_attendance_update',data12);
 
         <div class="box" style="padding:10px 10px 10px 10px;">
             <div class="box-header">
-              <div class="col-md-3"><h3 class="box-title"><?php echo $language['Staff Attendance']; ?></h3></div>
+              <div class="col-md-3"><h3 class="box-title">Staff Attendance</h3></div>
               <div class="col-md-5"><span style="font-weight:bold; float:right;">ORDER BY : </span></div>
               <div class="col-md-4">
                   <div class="col-md-3"><input type="radio" name="order_by" class="att_order" value="P" onclick="change_date();" <?php if(isset($_GET['radiovalue'])){ if($_GET['radiovalue']=='P'){ echo 'checked'; } } ?> /> <b>P</b></div>
@@ -98,8 +98,8 @@ post_content('attendance/emp_attendance_update',data12);
             <!-- /.box-header -->
             <div class="box-body table-responsive">
               <div class="col-md-12">
-			  <div class="col-md-5"><h4><?php echo $language['Attendance Date']; ?> : <?php echo $staff_attendance_date3; ?></h4></div>
-			  <div class="col-md-5"><h4><?php echo $language['Staff Type']; ?> : <?php echo $staff_type; ?></h4></div>
+			  <div class="col-md-5"><h4>Attendance Date : <?php echo $staff_attendance_date3; ?></h4></div>
+			  <div class="col-md-5"><h4>Staff Type : <?php echo $staff_type; ?></h4></div>
 			  <div class="col-md-2">
 			  <label>Change Date :</label>
               <input type="date" name="emp_date_change" id="emp_date_change" value="<?php echo $staff_attendance_date; ?>" class="form-control" oninput="change_date();" />
@@ -116,11 +116,11 @@ post_content('attendance/emp_attendance_update',data12);
 			  <table id="" class="table table-bordered table-striped">
                 <thead class="my_background_color">
                 <tr>
-                  <th><?php echo $language['S No']; ?></th>
-                  <th><?php echo $language['Staff Name']; ?></th>
-                  <th><?php echo $language['Unique Id']; ?></th>
-                  <th><?php echo $language['Staff Attendance']; ?></th>
-                  <th><?php echo $language['Staff Intime']; ?></th>
+                  <th>S No</th>
+                  <th>Staff Name</th>
+                  <th>Unique Id</th>
+                  <th>Staff Attendance</th>
+                  <th>Staff Intime</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -202,7 +202,7 @@ post_content('attendance/emp_attendance_update',data12);
               </table>
 			  </div>
 			  <div class="col-md-12">
-			  <center><button type="submit" name="submit1" class="btn btn-primary"><?php echo $language['Submit']; ?></button></center>
+			  <center><button type="submit" name="submit1" class="btn btn-primary">Submit</button></center>
 			  </div>
             </div>
             <!-- /.box-body -->

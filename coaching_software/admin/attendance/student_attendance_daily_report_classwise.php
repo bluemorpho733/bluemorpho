@@ -57,11 +57,11 @@ function for_print()
     <section class="content-header">
       <h1>
         Download Student Daily Attendance Report
-        <small><?php echo $language['Control Panel']; ?></small>
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="javascript:get_content('index_content')"><i class="fa fa-home"></i> <?php echo $language['Home']; ?></a></li>
-        <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
+        <li><a href="javascript:get_content('index_content')"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
         <li class="active"><i class="fa fa-user-plus"></i>Classwise Daily Report</li>
       </ol>
     </section>

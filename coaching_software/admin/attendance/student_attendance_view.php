@@ -2,14 +2,14 @@
 
        <section class="content-header">
       <h1>
-        <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-			 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/student_attendance_select')"><i class="fa fa-child"></i> <?php echo $language['Student Attendance Select']; ?></a></li>
-	 <li class="active"><?php echo $language['Student Attendance View']; ?></li>
+			 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+	  <li><a href="javascript:get_content('attendance/student_attendance_select')"><i class="fa fa-child"></i> Student Attendance Select</a></li>
+	 <li class="active">Student Attendance View</li>
       </ol>
     </section>
 	<!---*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-->
@@ -38,12 +38,12 @@
 			  <input type="hidden" name="student_section" id="student_section" value="<?php echo $section; ?>" />
 			  <input type="hidden" name="student_name" id="student_name" value="<?php echo $student_name; ?>" />
 			  </h3>
- <button style="width:100px;" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
- <button style="width:100px;" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
- <button style="width:100px;" type="button" class="btn "><?php echo $language['Not Filled']; ?></button>
+ <button style="width:100px;" type="button" class="btn btn-primary">Present</button>
+ <button style="width:100px;" type="button" class="btn btn-danger">Absent</button>
+ <button style="width:100px;" type="button" class="btn btn-warning">Leave</button>
+ <button style="width:100px;" type="button" class="btn btn-info">Holiday</button>
+ <button style="width:100px;" type="button" class="btn btn-success">Sunday</button>
+ <button style="width:100px;" type="button" class="btn ">Not Filled</button>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
@@ -51,15 +51,15 @@
                 <thead class="my_background_color">
 				
                 <tr>
-                  <th><?php echo $language['Month']; ?> <i class="fa fa-arrow-down" aria-hidden="true"></i></th>
-				  <th><?php echo $language['Student Name']; ?> : <?php echo $student_name; ?></th>
-                  <th><?php echo $language['Monthly Attendance']; ?></th>
-                  <th><?php echo $language['Class']; ?> : <?php echo $class; ?> / <?php echo $language['Section']; ?> : '<?php echo $section; ?>'<input typt="text" name="student_class" id="student_class" value="<?php echo $class; ?>" style="display:none;" /></th>
+                  <th>Month <i class="fa fa-arrow-down" aria-hidden="true"></i></th>
+				  <th>Student Name : <?php echo $student_name; ?></th>
+                  <th>Monthly Attendance</th>
+                  <th>Class : <?php echo $class; ?> / Section : '<?php echo $section; ?>'<input typt="text" name="student_class" id="student_class" value="<?php echo $class; ?>" style="display:none;" /></th>
                 </tr>
                 </thead>
                 <tbody id="stud_list">
                 <tr>
-				  <td><button type="button" class="btn btn-success"><?php echo $language['Date']; ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
+				  <td><button type="button" class="btn btn-success">Date <i class="fa fa-arrow-right" aria-hidden="true"></i></button></td>
 				  <td colspan="3">
 				  <?php
 				  $date1=$year.'-'.$current_month.'-01';
@@ -69,11 +69,11 @@
 				  ?>
 			  <button style="width:25px;padding-left:5px" type="button" class="btn btn-success"><?php echo $a; ?></button>
 				  <?php } ?>
-				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary"><?php echo $language['Present']; ?></button>
-				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger"><?php echo $language['Absent']; ?></button>
-				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning"><?php echo $language['Leave']; ?></button>
-                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info"><?php echo $language['Holiday']; ?></button>
-                   <button style="width:50px;padding-left:1px" type="button" class="btn btn-success"><?php echo $language['Sunday']; ?></button>
+				  <button style="width:50px;padding-left:1px" type="button" class="btn btn-primary">Present</button>
+				  <button style="width:50px;padding-left:2px" type="button" class="btn btn-danger">Absent</button>
+				  <button style="width:50px;padding-left:5px" type="button" class="btn btn-warning">Leave</button>
+                  <button style="width:50px;padding-left:1px" type="button" class="btn btn-info">Holiday</button>
+                   <button style="width:50px;padding-left:1px" type="button" class="btn btn-success">Sunday</button>
                     <button style="width:50px;padding-left:1px" type="button" class="btn ">N Fill</button>
 				  </td>
 				</tr>

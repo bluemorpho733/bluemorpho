@@ -41,13 +41,13 @@ if(staff_attendance_date!='' && staff_type!=''){
     <!-- Content Header (Page header) -->
      <section class="content-header">
       <h1>
-        <?php echo $language['Attendance Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        Attendance Management
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
-	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> <?php echo $language['Home']; ?></a></li>
-	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
-	 <li class="active"><?php echo $language['Staff Attendance Select']; ?></li>
+	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
+	  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
+	 <li class="active">Staff Attendance Select</li>
       </ol>
     </section>
 	<!---*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-->
@@ -61,14 +61,14 @@ if(staff_attendance_date!='' && staff_type!=''){
 		  <!-- /.box -->
          <div class="box" style="padding:10px 10px 10px 10px;">
             <div class="box-header">
-              <h3 class="box-title"><?php echo $language['Fill Attendance']; ?></h3>
+              <h3 class="box-title">Fill Attendance</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
 			  <div class="form-group">
 				<label>Register :</label>
 				<select name="staff_type" id="staff_type" class="form-control" onchange="emp_attendance(this.value);" required>
-				<option value=""><?php echo $language['Select']; ?> </option>
+				<option value="">Select </option>
                 <?php
                 $query1="select * from school_info_attendance_register";
                 $result1=mysqli_query($conn37,$query1) or die(mysqli_error($conn37));
@@ -80,15 +80,15 @@ if(staff_attendance_date!='' && staff_type!=''){
 				</select>
 			  </div>
 			  <div class="form-group">
-					<label for="exampleInputEmail1"><?php echo $language['Date']; ?> :</label>
+					<label for="exampleInputEmail1">Date :</label>
 					<?php $today_date= date('Y-m-d');
 					$date_diff=  date('Y-m-d', strtotime($today_date. '-1000day'));
 					?>
 					<input  type="date" class="form-control" id='staff_attendance_date' name="staff_attendance_date" max="<?php echo date('Y-m-d'); ?>" min="<?php echo $date_diff; ?>" value="<?php echo date('Y-m-d'); ?>" >
 			  </div>
 			  <div class="form-group">
-					<center><button type="button" onclick="fill_attendance();" class="btn btn-default my_background_color"><?php echo $language['Fill Attendance']; ?></button>
-					<button type="button" name="view" onclick="view_attendance();" class="btn btn-default my_background_color"><?php echo $language['View Attendance']; ?></button></center>
+					<center><button type="button" onclick="fill_attendance();" class="btn btn-default my_background_color">Fill Attendance</button>
+					<button type="button" name="view" onclick="view_attendance();" class="btn btn-default my_background_color">View Attendance</button></center>
 			  </div>
 			  
             </div>
@@ -103,26 +103,26 @@ if(staff_attendance_date!='' && staff_type!=''){
           <!-- /.box -->
        <div class="box" style="padding:10px 10px 10px 10px;">
             <div class="box-header">
-              <h3 class="box-title"><?php echo $language['Current Month Attendance List']; ?></h3>
+              <h3 class="box-title">Current Month Attendance List</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive" style="height:800px;">
               <table id="example1" class="table table-bordered table-striped">
                 <thead class="my_background_color">
                 <tr>
-                  <th><?php echo $language['S No']; ?></th>
-                  <th><?php echo $language['Staff Name']; ?></th>
-                  <th><?php echo $language['Type']; ?></th>
-				  <th><?php echo $language['Designation']; ?></th>
-                  <th><?php echo $language['Month']; ?></th>
-                  <th><?php echo $language['Present']; ?></th>
-                  <th><?php echo $language['Absent']; ?></th>
-                  <th><?php echo $language['Leave']; ?></th>
+                  <th>S No</th>
+                  <th>Staff Name</th>
+                  <th>Type</th>
+				  <th>Designation</th>
+                  <th>Month</th>
+                  <th>Present</th>
+                  <th>Absent</th>
+                  <th>Leave</th>
                   
                   <th>Update By</th>
                   <th>Date</th>
                   
-                  <th><?php echo $language['View']; ?></th>
+                  <th>View</th>
                 </tr>
                 </thead>
                 <tbody id="search_list">

@@ -49,11 +49,11 @@ function for_print(){
     <section class="content-header">
       <h1>
         Download Attendance Info
-        <small><?php echo $language['Control Panel']; ?></small>
+        <small>Control Panel</small>
       </h1>
       <ol class="breadcrumb">
           <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
-		  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> <?php echo $language['Attendance']; ?></a></li>
+		  <li><a href="javascript:get_content('attendance/attendance')"><i class="fa fa-child"></i> Attendance</a></li>
           <li class="active"><i class="fa fa-user-plus"></i>Download</li>
       </ol>
     </section>
@@ -80,18 +80,18 @@ function for_print(){
                     <th><b style="font-size:15px">Select Month</b></th>
                     <select class="form-control" name="month_name" id="month_name" required>
                     <option value="" >Select Month</option>
-                    <option value="04"><?php echo $language['April']; ?></option>
-                    <option value="05"><?php echo $language['May']; ?></option>
-                    <option value="06"><?php echo $language['June']; ?></option>
-                    <option value="07"><?php echo $language['July']; ?></option>
-                    <option value="08"><?php echo $language['August']; ?></option>
-                    <option value="09"><?php echo $language['September']; ?></option>
-                    <option value="10"><?php echo $language['October']; ?></option>
-                    <option value="11"><?php echo $language['November']; ?></option>
-                    <option value="12"><?php echo $language['December']; ?></option>
-                    <option value="01"><?php echo $language['January']; ?></option>
-                    <option value="02"><?php echo $language['February']; ?></option>
-                    <option value="03"><?php echo $language['March']; ?></option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
                     </select>
                     </div>
                     </div>
