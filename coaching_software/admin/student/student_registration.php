@@ -255,6 +255,11 @@ $registration_id=$row['registration_id'];
 					  <label>Course<font style="color:red"><b>*</b></font></label>
 					 	<select name="course_code" id="course_code" class="form-control" onchange="for_subject();" required>
 							<option value="">Select</option>
+
+
+
+
+
 						<?php
 						$que="select * from coaching_courses";
 						$run=mysqli_query($conn37,$que);
@@ -263,6 +268,9 @@ $registration_id=$row['registration_id'];
 						$coaching_info_courses_name = $row['coaching_info_courses_name'];
 						$coaching_info_courses_code = $row['coaching_info_courses_code'];
 						?>
+
+
+
 					  <option value="<?php echo $coaching_info_courses_code;?>"><?php echo $coaching_info_courses_name;?></option>
 					  <?php } ?>
 					  </select>
