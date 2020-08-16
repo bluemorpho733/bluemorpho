@@ -50,7 +50,7 @@ success: function(detail){
       </h1>
       <ol class="breadcrumb">
 	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
-	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo $language['Student']; ?></a></li>
+	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo 'Student'; ?></a></li>
 	  <li class="active"><?php echo 'Student Registration List'; ?></li>
       </ol>
     </section>
@@ -97,15 +97,15 @@ success: function(detail){
                 <thead class="my_background_color">
                 <tr>
 				  <th>#</th>
-				  <th><?php echo $language['Student Name']; ?></th>
-				  <th><?php echo $language['Father Name']; ?></th>
+				  <th><?php echo 'Student Name'; ?></th>
+				  <th><?php echo 'Father Name'; ?></th>
 				  <th>Course</th>
-				  <th><?php echo $language['Registration Date']; ?></th>
+				  <th><?php echo 'Registration Date'; ?></th>
 				  <th>Update By</th>
                   <th>Date</th>
-                  <th><?php echo $language['Make Admission']; ?></th>
-                  <th><?php echo $language ['Print']; ?></th>
-				  <th><?php echo $language['Delete']; ?></th>
+                  <th><?php echo 'Make Admission'; ?></th>
+                  <th><?php echo 'Print'; ?></th>
+				  <th><?php echo 'Delete'; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -149,10 +149,10 @@ while($row=mysqli_fetch_assoc($run)){
     <td><?php echo $last_updated_date; ?></td>
 
     <td><button type="button" onclick="post_content('student/student_admission','<?php echo 'student_roll_no='.$student_roll_no; ?>')" class="btn btn-default my_background_color">
-    <?php echo $language['Make Admission']; ?></button></td>
-	<td><a href='<?php echo $pdf_path; ?>registration_form/<?php echo $registration_form_pdf; ?>?id=<?php echo $student_roll_no; ?>' target="_blank"><button type="button" class="btn btn-default my_background_color"><?php echo $language['Print']; ?></button></a></td>
+    <?php echo 'Make Admission'; ?></button></td>
+	<td><a href='<?php echo $pdf_path; ?>registration_form/<?php echo $registration_form_pdf; ?>?id=<?php echo $student_roll_no; ?>' target="_blank"><button type="button" class="btn btn-default my_background_color"><?php echo 'Print'; ?></button></a></td>
 	<td><button type="button" onclick="return valid('<?php echo $student_roll_no; ?>','<?php echo $student_date_of_admission; ?>','<?php echo $student_registration_fee; ?>')" class="btn btn-default my_background_color">
-    <?php echo $language['Delete']; ?></button></td>
+    <?php echo 'Delete'; ?></button></td>
     </tr>
     <?php } ?>
     </tbody>
