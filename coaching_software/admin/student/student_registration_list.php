@@ -45,13 +45,13 @@ success: function(detail){
 
     <section class="content-header">
       <h1>
-        <?php echo $language['Student Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        <?php echo "Student Management"; ?>
+        <small><?php echo 'Control Panel'; ?></small>
       </h1>
       <ol class="breadcrumb">
 	 <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
 	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo $language['Student']; ?></a></li>
-	  <li class="active"><?php echo $language['Student Registration List']; ?></li>
+	  <li class="active"><?php echo 'Student Registration List'; ?></li>
       </ol>
     </section>
 	
@@ -62,7 +62,7 @@ success: function(detail){
 	       <!-- general form elements disabled -->
           <div class="box box-primary my_border_top">
             <div class="box-header with-border ">
-            <h3 class="box-title"><?php echo $language['Registration List']; ?></h3>
+            <h3 class="box-title"><?php echo 'Registration List'; ?></h3>
             </div>
             <!-- /.box-header -->
 <!------------------------------------------------Start Registration form--------------------------------------------------->
