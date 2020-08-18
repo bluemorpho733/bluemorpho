@@ -48,7 +48,7 @@ Application,Teacher Android Application,Bus Driver Android Application." />
 <style>
 
 
-// .particles-js-canvas-el {
+/*// .particles-js-canvas-el {
   // position: absolute;
   // left: 450px;
   // top: 0px;
@@ -74,7 +74,7 @@ Application,Teacher Android Application,Bus Driver Android Application." />
 #jijak{
 	margin:-120px 0px 0px 0px;
 }
-}
+}*/
 .field-icon {
   float: right;
   margin-left: -28px;
@@ -82,6 +82,118 @@ Application,Teacher Android Application,Bus Driver Android Application." />
   position: relative;
   z-index: 8;
 }
+
+.login-box-body
+{
+box-shadow: 5px 5px 20px 10px #0000008a;
+border-radius: 5px;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+	z-index: -1;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    /*background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);*/
+}
+#jijak{
+	z-index: 1;
+	margin-bottom: -500px;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+.btn:hover
+{
+	background: #fff !important;
+	color: #9802FB;
+	box-shadow: 0px 0px 8px #9802FB !important;
+	
+}
+.btn
+{
+	
+	background: #9802FB !important;
+	box-shadow: 0px 0px 8px #000 !important;
+	border-radius: 15px;
+}
+.btn-primary:hover
+ {
+border-color: #9802FB;
+ }
+ .btn-primary
+ {
+border-color: #9802FB;
+ }
+ .btn-block 
+ {
+
+ }
+ .btn-flat
+ {
+	 border: 1px 5px;
+	 border-radius: 5px !important;
+ }
 </style>
 </head>
 <script>
@@ -95,10 +207,13 @@ function myFunction() {
   }
 }
 </script>
-<body class="hold-transition login-page" style="background-image:linear-gradient(to right, #4F00BC , #29ABE2);">
+<body class="hold-transition login-page" style="background-image:linear-gradient(to right, #CF1F82 , #9802FB);">
 <section class="content">
-<div id="particles-js">
-<script src="software/particles.js"></script>
+
+
+  
+<!--<div id="particles-js">
+<script src="software/particles.js"></script>-->
 <script src="coaching_software/assests/js12/app.js"></script>
 <script src="coaching_software/assests/js12/lib/stats.js"></script>
 		 
@@ -124,11 +239,11 @@ function myFunction() {
 				  }
 				  ?>
 				  <div class="login-logo">
-					<a href="" style="color:red;"><b><?php echo ucwords($school_short_name); ?></b></a>
+					<a href="" style="color:white; text-shadow: 1px 10px 15px #000;"><b><?php echo ucwords($school_short_name); ?></b></a>
 				  </div>
 				  <!-- /.login-logo -->
 				  <div class="login-box-body">
-					<p class="login-box-msg" style="color:red;">Enter Your Login Information</p>
+					<p class="login-box-msg" style="color:#9802FB; font-weight: 700; font-size: 15px;">Enter Your Login Information</p>
 
 				<form  method="post">
 			<div class="form-group has-feedback">
@@ -202,6 +317,18 @@ function myFunction() {
   };
   requestAnimationFrame(update);
 </script>
+
+<div class="waveWrapper waveAnimation">
+<div class="waveWrapperInner bgTop">
+    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgMiddle">
+    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+  </div>
+  <div class="waveWrapperInner bgBottom">
+    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+  </div>
+</div>
 
 </div>
 </section>
