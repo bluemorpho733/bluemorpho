@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2020 at 04:55 PM
+-- Generation Time: Aug 22, 2020 at 07:00 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.31
 
@@ -284,8 +284,21 @@ CREATE TABLE `coaching_courses` (
 --
 
 INSERT INTO `coaching_courses` (`s_no`, `school_info_class_name`, `school_info_class_code`, `school_info_class_category`, `school_info_class_description`, `school_info_class_duration`, `school_info_class_trainer`, `courses_status`, `session`, `blank_field_2`, `blank_field_3`, `blank_field_4`) VALUES
-(1, 'Java Full Course', '101', 'complete course', '', '3 month', '5', 'Active', '', '', '', ''),
-(2, 'php Full Course', '102', 'complete course', '', '2', '4', 'Active', '', '', '', '');
+(1, 'NURSERY', '101', 'complete course', '', '3 month', '5', 'Active', '', '', '', ''),
+(2, 'LKG', '102', 'complete course', '', '2', '4', 'Active', '', '', '', ''),
+(3, 'UKG', '103', '  complete course', '', '', '', 'Active', '', '', '', ''),
+(4, '1ST', '104', '', '', '', '', 'Active', '', '', '', ''),
+(5, '2ND', '105', '', '', '', '', 'Active', '', '', '', ''),
+(6, '3RD', '106', '', '', '', '', 'Active', '', '', '', ''),
+(7, '4TH', '107', '', '', '', '', 'Active', '', '', '', ''),
+(8, '5TH', '108', '', '', '', '', 'Active', '', '', '', ''),
+(9, '6TH', '109', '', '', '', '', 'Active', '', '', '', ''),
+(10, '7TH', '110', '', '', '', '', 'Active', '', '', '', ''),
+(11, '8TH', '111', '', '', '', '', 'Active', '', '', '', ''),
+(12, '9TH', '112', '', '', '', '', 'Active', '', '', '', ''),
+(13, '10TH', '113', '', '', '', '', 'Active', '', '', '', ''),
+(14, '11TH', '114', '', '', '', '', 'Active', '', '', '', ''),
+(15, '12TH', '115', '', '', '', '', 'Active', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1475,7 +1488,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`s_no`, `company_name`, `emp_id`, `password`, `student_id_generate`, `emp_id_generate`, `admission_no`, `employee_id_no`, `fee_reciept_no`, `email_id`, `tc_generate_no`, `student_hostel_id`, `bus_id_no`, `class_code`, `update_status`, `update_change`, `class_change_by`, `last_updated_date`, `branch_code`, `course_code`, `batch_code`, `registration_id`, `fee_structure_code`, `blank_field_2`, `blank_field_3`, `blank_field_4`, `blank_field_5`, `session_value`, `student_medium`) VALUES
-(1, '', 'simption', 'tech', 16, '1', 1, 12, 1, '', 1, '0_4', '1', 0, '', '', '', '0000-00-00', '104', '103', '104', '16', '101', '', '', '', '1', '2018_19', '');
+(1, '', 'simption', 'tech', 24, '1', 1, 12, 1, '', 1, '0_4', '1', 0, '', '', '', '0000-00-00', '104', '103', '104', '16', '101', '', '', '', '1', '2018_19', '');
 
 -- --------------------------------------------------------
 
@@ -1552,6 +1565,47 @@ INSERT INTO `register_details` (`s_no`, `register_name`, `register_code`, `regis
 (18, 'Register8', 'register8', 8, 'Active', '2021-22', 1, '2020-05-23 17:14:19'),
 (19, 'Register9', 'register9', 9, 'Active', '2021-22', 1, '2020-05-23 17:14:19'),
 (20, 'Register10', 'register10', 10, 'Active', '2021-22', 1, '2020-05-23 17:14:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registration_details`
+--
+
+CREATE TABLE `registration_details` (
+  `s_no` int(11) NOT NULL,
+  `student_registration_number` varchar(20) NOT NULL,
+  `stuent_old_or_new` varchar(200) NOT NULL,
+  `class_code` varchar(10) NOT NULL,
+  `my_subject_name` varchar(55) NOT NULL,
+  `student_name` varchar(20) NOT NULL,
+  `student_father_name` varchar(20) NOT NULL,
+  `student_mother_name` varchar(20) NOT NULL,
+  `student_father_contact_number` varchar(50) NOT NULL,
+  `student_father_contact_number2` varchar(100) NOT NULL,
+  `student_date_of_birth` date NOT NULL,
+  `student_date_of_birth_in_word` varchar(5) NOT NULL,
+  `student_gender` varchar(50) NOT NULL,
+  `student_date_of_admission` date NOT NULL,
+  `student_admission_type` varchar(20) NOT NULL,
+  `student_admission_scheme` varchar(5) NOT NULL,
+  `student_fee_category` varchar(20) NOT NULL,
+  `student_bus` varchar(20) NOT NULL,
+  `student_hostel` varchar(50) NOT NULL,
+  `student_library` varchar(50) NOT NULL,
+  `student_registration_fee` varchar(50) NOT NULL,
+  `student_sms_contact_number` varchar(20) NOT NULL,
+  `student_adress` varchar(20) NOT NULL,
+  `student_city` varchar(20) NOT NULL,
+  `student_block` varchar(100) NOT NULL,
+  `student_district` varchar(50) NOT NULL,
+  `student_state` varchar(100) NOT NULL,
+  `student_pincode` varchar(20) NOT NULL,
+  `student_landmark` varchar(100) NOT NULL,
+  `session_value` varchar(10) NOT NULL,
+  `updated_by` int(11) NOT NULL,
+  `updated_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1696,6 +1750,129 @@ CREATE TABLE `school_details` (
 
 INSERT INTO `school_details` (`s_no`, `school_id`, `school_full_name`, `school_short_name`, `school_email`, `school_website`, `school_code`, `school_dise_code`, `school_registration_no`, `school_state`, `school_district`, `school_city`, `school_pincode`, `school_landmark`, `school_full_address`, `school_short_address`, `school_contact_no`, `school_sms`, `school_sms_contact_no`, `school_principal_name`, `school_principal_email`, `school_principal_contact_no`, `school_principal_seal`, `school_principal_signature`, `school_logo`, `school_image`, `school_letter_head_header`, `school_letter_head_footer`, `school_status`, `session_value`, `updated_by`, `updated_date`, `employee_id_start_from`, `student_id_start_from`, `register_id_start_from`, `show_session_dropdown`, `default_session`, `show_medium_dropdown`, `default_medium`, `show_board_dropdown`, `default_board`, `show_shift_dropdown`, `default_shift`) VALUES
 (1, '101', 'Blue Morpho PVT. LTD.', 'Blue Morpho pvt. ltd.', 'bluemarpho@gmail.com', 'bluemarpho.com', '100001', '10000001', '1000000001', 'M.P.', 'Bhopal', 'Bhopal', '462011', 'Chetak Bridge', 'A-12, G-Complex M. P. Nagar Bhopal', 'A-12, G-Complex M. P. Nagar Bhopal', '1234567893', 'Yes', '1234567893', 'Mr. Vijay Chouhan', 'vijay123@gmail.com', '1478523693', '', '', '', '', '', '', 'Active', '', 0, '2020-05-30 17:18:20', 20000001, 10000001, '1000001', 'Yes', '2020-21', 'No', 'medium1', 'No', 'board1', 'No', 'shift1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `school_info_fee_category`
+--
+
+CREATE TABLE `school_info_fee_category` (
+  `s_no` int(100) NOT NULL,
+  `category_name` varchar(100) NOT NULL,
+  `category_name_hindi` varchar(200) NOT NULL,
+  `category_code` varchar(20) NOT NULL,
+  `session_value` varchar(50) NOT NULL,
+  `student_medium` varchar(50) NOT NULL,
+  `medium` varchar(50) NOT NULL,
+  `school` varchar(50) NOT NULL,
+  `board` varchar(50) NOT NULL,
+  `shift` varchar(50) NOT NULL,
+  `filter1` varchar(50) NOT NULL,
+  `filter2` varchar(50) NOT NULL,
+  `filter3` varchar(50) NOT NULL,
+  `update_change` varchar(50) NOT NULL,
+  `last_updated_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `school_info_fee_category`
+--
+
+INSERT INTO `school_info_fee_category` (`s_no`, `category_name`, `category_name_hindi`, `category_code`, `session_value`, `student_medium`, `medium`, `school`, `board`, `shift`, `filter1`, `filter2`, `filter3`, `update_change`, `last_updated_date`) VALUES
+(1, 'Old Student ', '', 'category1', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(2, 'New Students', '', 'category2', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(3, '', '', 'category3', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(4, '', '', 'category4', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(5, '', '', 'category5', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(6, '', '', 'category6', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(7, '', '', 'category7', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(8, '', '', 'category8', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(9, '', '', 'category9', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00'),
+(10, '', '', 'category10', '', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `school_info_general`
+--
+
+CREATE TABLE `school_info_general` (
+  `s_no` int(100) NOT NULL,
+  `sms_username` varchar(100) NOT NULL,
+  `sms_password` varchar(100) NOT NULL,
+  `sms_sender_id` varchar(100) NOT NULL,
+  `school_info_school_name` varchar(300) NOT NULL,
+  `school_info_school_state` varchar(300) NOT NULL,
+  `school_info_username` varchar(100) NOT NULL,
+  `school_info_password` varchar(100) NOT NULL,
+  `school_info_school_district` varchar(300) NOT NULL,
+  `school_info_school_city` varchar(300) NOT NULL,
+  `school_info_school_pincode` varchar(300) NOT NULL,
+  `school_info_school_landmark` varchar(300) NOT NULL,
+  `school_info_school_latitude` varchar(300) NOT NULL,
+  `school_info_school_longitude` varchar(200) NOT NULL,
+  `school_info_school_address` varchar(300) NOT NULL,
+  `school_info_school_contact_no` varchar(300) NOT NULL,
+  `school_info_school_email_id` varchar(100) NOT NULL,
+  `school_info_school_website` varchar(100) NOT NULL,
+  `school_info_principal_name` varchar(300) NOT NULL,
+  `school_info_dise_code` varchar(300) NOT NULL,
+  `school_info_school_code` varchar(300) NOT NULL,
+  `school_info_registration_code` varchar(300) NOT NULL,
+  `school_info_total_class` varchar(300) NOT NULL,
+  `school_info_medium` varchar(300) NOT NULL,
+  `school_info_school_board` varchar(300) NOT NULL,
+  `school_info_student_type` varchar(300) NOT NULL,
+  `school_info_student_category` varchar(300) NOT NULL,
+  `school_info_principal_seal` varchar(300) NOT NULL,
+  `school_info_principal_signature` varchar(300) NOT NULL,
+  `school_info_logo` varchar(300) NOT NULL,
+  `update_status` varchar(50) NOT NULL,
+  `update_change` varchar(50) NOT NULL,
+  `class_change_by` varchar(50) NOT NULL,
+  `last_updated_date` date NOT NULL,
+  `blank_field_1` varchar(100) NOT NULL,
+  `blank_field_2` varchar(100) NOT NULL,
+  `blank_field_3` varchar(100) NOT NULL,
+  `blank_field_4` varchar(100) NOT NULL,
+  `blank_field_5` varchar(100) NOT NULL,
+  `session_value` varchar(20) NOT NULL,
+  `student_medium` varchar(50) NOT NULL,
+  `school_info_about` varchar(500) NOT NULL,
+  `fees_type` varchar(50) NOT NULL,
+  `hostel_fees_type` varchar(50) NOT NULL,
+  `staff_type` varchar(50) NOT NULL,
+  `marksheet_type` varchar(50) NOT NULL,
+  `tc_type` varchar(50) NOT NULL,
+  `shift` varchar(50) NOT NULL,
+  `multiple_school` varchar(50) NOT NULL,
+  `medium` varchar(50) NOT NULL,
+  `school` varchar(50) NOT NULL,
+  `board` varchar(50) NOT NULL,
+  `filter1` varchar(50) NOT NULL,
+  `filter2` varchar(50) NOT NULL,
+  `filter3` varchar(50) NOT NULL,
+  `database_version` varchar(100) NOT NULL,
+  `otp_info` varchar(100) NOT NULL,
+  `defalut_session_value` varchar(20) NOT NULL,
+  `fees_category` varchar(20) NOT NULL,
+  `attendance_machine_message` varchar(10) NOT NULL,
+  `document_no_2018_19` varchar(20) NOT NULL,
+  `document_no_2019_20` varchar(20) NOT NULL,
+  `document_no_2020_21` varchar(20) NOT NULL,
+  `document_no_2021_22` varchar(20) NOT NULL,
+  `document_no_2022_23` varchar(20) NOT NULL,
+  `website_management` varchar(200) NOT NULL,
+  `software_version` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `school_info_general`
+--
+
+INSERT INTO `school_info_general` (`s_no`, `sms_username`, `sms_password`, `sms_sender_id`, `school_info_school_name`, `school_info_school_state`, `school_info_username`, `school_info_password`, `school_info_school_district`, `school_info_school_city`, `school_info_school_pincode`, `school_info_school_landmark`, `school_info_school_latitude`, `school_info_school_longitude`, `school_info_school_address`, `school_info_school_contact_no`, `school_info_school_email_id`, `school_info_school_website`, `school_info_principal_name`, `school_info_dise_code`, `school_info_school_code`, `school_info_registration_code`, `school_info_total_class`, `school_info_medium`, `school_info_school_board`, `school_info_student_type`, `school_info_student_category`, `school_info_principal_seal`, `school_info_principal_signature`, `school_info_logo`, `update_status`, `update_change`, `class_change_by`, `last_updated_date`, `blank_field_1`, `blank_field_2`, `blank_field_3`, `blank_field_4`, `blank_field_5`, `session_value`, `student_medium`, `school_info_about`, `fees_type`, `hostel_fees_type`, `staff_type`, `marksheet_type`, `tc_type`, `shift`, `multiple_school`, `medium`, `school`, `board`, `filter1`, `filter2`, `filter3`, `database_version`, `otp_info`, `defalut_session_value`, `fees_category`, `attendance_machine_message`, `document_no_2018_19`, `document_no_2019_20`, `document_no_2020_21`, `document_no_2021_22`, `document_no_2022_23`, `website_management`, `software_version`) VALUES
+(3, '16/07/2019', '16/07/2020', '', 'Blue Morpho SCHOOL', 'BHOPAL', '', '', 'BHOPAL', 'BHOPAL', '249402', 'NEAR DENSO CHOWK', '', '', 'MAHADEV PURAM PHASE 1, NEAR DENSO CHOWK, SIDCUL,', '9411177790', 'wisdom.ipshdr@gmail.com', 'www.wipsharidwar.com', 'MRS. RAPTI RANI NAGAR', '', '1054', '0000', '', 'English', 'CBSE Board', 'Regular', 'EWS + Non EWS', '', '', '', '', 'ankurchauhan0899@gmail.com', '', '2020-06-16', 'No', '', '', '', '', '2018_19', '', 'EVOLVE TO EXCEL', 'monthly', 'fees1', 'staff', '', '', '', '', '', '', '', '', '', '', '3.6', '', '2020_21', 'monthly', 'No', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2205,7 +2382,7 @@ CREATE TABLE `student_admission_info` (
   `drop_point` varchar(50) NOT NULL,
   `trip` varchar(50) NOT NULL,
   `hostel_bed_no` varchar(50) NOT NULL,
-  `	student_bus_route` varchar(50) NOT NULL,
+  ` student_bus_route` varchar(50) NOT NULL,
   `caste_certificate_no` varchar(100) NOT NULL,
   `student_registration_number` varchar(20) NOT NULL,
   `student_enrollment_number` varchar(20) NOT NULL,
@@ -2217,7 +2394,7 @@ CREATE TABLE `student_admission_info` (
 -- Dumping data for table `student_admission_info`
 --
 
-INSERT INTO `student_admission_info` (`s_no`, `student_id_generate`, `student_name`, `student_father_name`, `student_mother_name`, `course_code`, `subject_code`, `my_subject_name`, `student_roll_no`, `coaching_roll_no`, `student_date_of_birth`, `student_gender`, `student_religion`, `student_category`, `student_rf_id_number`, `student_adhar_number`, `student_bank_name`, `student_bank_ifsc_code`, `student_admission_type`, `student_date_of_admission`, `student_admission_number`, `student_scholar_number`, `student_father_contact_number`, `student_father_email_id`, `student_mother_contact_number`, `student_mother_email_id`, `student_contact_number`, `student_email_id`, `student_address`, `student_account_number`, `student_photo`, `student_facility`, `student_bus`, `student_hostel`, `student_library`, `student_status`, `registration_final`, `update_status`, `update_change`, `student_admission_remark`, `student_sms_contact_number`, `student_web_sms`, `last_updated_date`, `student_bus_no`, `student_hostel_name`, `student_hostel_room_no`, `student_bus_route`, `session_value`, `student_identity_category`, `student_hostel_id`, `student_registration_fee`, `student_bus_fee_category`, `student_bus_fee_category_code`, `attendance_sync`, `house_name`, `pickup_point`, `drop_point`, `trip`, `hostel_bed_no`, `	student_bus_route`, `caste_certificate_no`, `student_registration_number`, `student_enrollment_number`, `student_admission_class`, `student_whatsapp_number`) VALUES
+INSERT INTO `student_admission_info` (`s_no`, `student_id_generate`, `student_name`, `student_father_name`, `student_mother_name`, `course_code`, `subject_code`, `my_subject_name`, `student_roll_no`, `coaching_roll_no`, `student_date_of_birth`, `student_gender`, `student_religion`, `student_category`, `student_rf_id_number`, `student_adhar_number`, `student_bank_name`, `student_bank_ifsc_code`, `student_admission_type`, `student_date_of_admission`, `student_admission_number`, `student_scholar_number`, `student_father_contact_number`, `student_father_email_id`, `student_mother_contact_number`, `student_mother_email_id`, `student_contact_number`, `student_email_id`, `student_address`, `student_account_number`, `student_photo`, `student_facility`, `student_bus`, `student_hostel`, `student_library`, `student_status`, `registration_final`, `update_status`, `update_change`, `student_admission_remark`, `student_sms_contact_number`, `student_web_sms`, `last_updated_date`, `student_bus_no`, `student_hostel_name`, `student_hostel_room_no`, `student_bus_route`, `session_value`, `student_identity_category`, `student_hostel_id`, `student_registration_fee`, `student_bus_fee_category`, `student_bus_fee_category_code`, `attendance_sync`, `house_name`, `pickup_point`, `drop_point`, `trip`, `hostel_bed_no`, `  student_bus_route`, `caste_certificate_no`, `student_registration_number`, `student_enrollment_number`, `student_admission_class`, `student_whatsapp_number`) VALUES
 (1, '5', 'Piyush Jaiswal', 'Shyamsundar Kushwaha', '', '101', '', '101', '1900005', NULL, '1995-12-20', 'Male', 'Hindu', '', '', '', '', NULL, '', '2019-06-14', '', NULL, '', NULL, '', NULL, '9074172724', 'pj6754@gmail.com', 'Bhopal', '', NULL, NULL, 'No', 'No', 'No', 'Active', 'yes', '', 'Simption', '', '', 'Yes', '2019-06-20 02:30:21', '', '', '', '', '2018_19', '', '', '', '', '', '0', '', '', '', '', '', '', '', '5', '', '', ''),
 (2, '6', 'Anuj Kumar Kushwaha', 'Shyamsundar Kushwaha', '', '102', '', '104,105', '1900006', '1', '1995-12-14', 'Male', 'Hindu', '', '', '', '', NULL, '', '2019-06-15', '', NULL, '9897471514', NULL, '', NULL, '9926447514', 'sachinjain9944@gmail.com', 'bhopal', '', NULL, NULL, 'No', 'No', 'No', 'Active', 'yes', '', 'Simption', '', '', 'Yes', '2019-06-25 12:16:26', '', '', '', '', '2018_19', '', '', '', '', '', '0', '', '', '', '', '', '', '', '6', '', '', ''),
 (8, '12', 'Rupesh Patel', 'Shyamsundar patel', '', '102', '', '105', '1900012', '2', '1998-12-20', 'Male', 'Hindu', '', '', '', '', NULL, '', '2019-06-20', '', NULL, '', NULL, '', NULL, '9074172724', 'rupeshpatel45433@gmail.com', 'Bhopal', '', NULL, NULL, 'No', 'No', 'No', 'Active', 'yes', '', 'Simption', '', '', 'Yes', '2019-06-28 03:15:16', '', '', '', '', '2018_19', '', '', '', '', '', '0', '', '', '', '', '', '', '', '12', '', '', ''),
@@ -2425,7 +2602,15 @@ INSERT INTO `student_documents` (`s_no`, `student_image`, `student_roll_no`, `st
 (18, '', '2000013', ''),
 (19, '', '2000014', ''),
 (20, '', '2000015', ''),
-(21, '', '2000016', '');
+(21, '', '2000016', ''),
+(22, '', '2000017', ''),
+(23, '', '2000018', ''),
+(24, '', '2000019', ''),
+(25, '', '2000020', ''),
+(26, '', '2000021', ''),
+(27, '', '2000022', ''),
+(28, '', '2000023', ''),
+(29, '', '2000024', '');
 
 -- --------------------------------------------------------
 
@@ -3222,6 +3407,12 @@ ALTER TABLE `register_details`
   ADD PRIMARY KEY (`s_no`);
 
 --
+-- Indexes for table `registration_details`
+--
+ALTER TABLE `registration_details`
+  ADD PRIMARY KEY (`s_no`);
+
+--
 -- Indexes for table `reminder`
 --
 ALTER TABLE `reminder`
@@ -3237,6 +3428,19 @@ ALTER TABLE `role_details`
 -- Indexes for table `school_details`
 --
 ALTER TABLE `school_details`
+  ADD PRIMARY KEY (`s_no`);
+
+--
+-- Indexes for table `school_info_fee_category`
+--
+ALTER TABLE `school_info_fee_category`
+  ADD PRIMARY KEY (`s_no`),
+  ADD KEY `session_value` (`session_value`,`category_code`);
+
+--
+-- Indexes for table `school_info_general`
+--
+ALTER TABLE `school_info_general`
   ADD PRIMARY KEY (`s_no`);
 
 --
@@ -3397,7 +3601,7 @@ ALTER TABLE `coaching_branch`
 -- AUTO_INCREMENT for table `coaching_courses`
 --
 ALTER TABLE `coaching_courses`
-  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `coaching_courses_subject`
@@ -3568,6 +3772,12 @@ ALTER TABLE `register_details`
   MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
+-- AUTO_INCREMENT for table `registration_details`
+--
+ALTER TABLE `registration_details`
+  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `reminder`
 --
 ALTER TABLE `reminder`
@@ -3584,6 +3794,18 @@ ALTER TABLE `role_details`
 --
 ALTER TABLE `school_details`
   MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `school_info_fee_category`
+--
+ALTER TABLE `school_info_fee_category`
+  MODIFY `s_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `school_info_general`
+--
+ALTER TABLE `school_info_general`
+  MODIFY `s_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `school_library_book`
@@ -3649,7 +3871,7 @@ ALTER TABLE `student_attendance`
 -- AUTO_INCREMENT for table `student_documents`
 --
 ALTER TABLE `student_documents`
-  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `student_fee_structure`

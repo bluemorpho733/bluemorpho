@@ -20,6 +20,43 @@ $que11="select * from login";
 	  
 
 <script>
+
+function get_dob_in_words(dob1){
+       $.ajax({
+			  type: "POST",
+              url: access_link+"student/ajax_datetoword.php?dob="+dob1+"",
+              cache: false,
+              success: function(detail){
+                  
+				  document.getElementById('student_date_of_birth_in_word1').value=detail;
+              }
+           });
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function for_stream(value2){
 		   if(value2=="11TH" || value2=="12TH"){
 $("#student_class_stream_div").show();
@@ -143,8 +180,8 @@ e.preventDefault();
             cache: false,
             processData: false,
             success: function(detail){
-				// alert(detail);
-				   // $("#p").html(detail);
+				alert(detail);
+				   $("#p").html(detail);
                var res=detail.split("|?|");
 			   if(res[1]=='success'){
 				   alert('Successfully Complete');
@@ -173,7 +210,7 @@ $registration_id=$row['registration_id'];
             </div>
             <!-- /.box-header -->
 <!------------------------------------------------Start Registration form--------------------------------------------------->
-		  <form name="myForm" method="post" id="my_form" enctype="multipart/form-data" action="" onsubmit="return validate();">	
+ <form name="myForm" method="post" id="my_form" enctype="multipart/form-data" action="" onsubmit="return validate();">	
     <div class="box-body">
 		
 
@@ -183,77 +220,27 @@ $registration_id=$row['registration_id'];
 						<input type="text"  name="student_registration_number" id="student_registration_number" placeholder="Student Registration Number" readonly value="<?php echo $registration_id; ?>" class="form-control new_student">
 					</div>
 				</div>   
-				<div class="col-md-3">
-					<div class="form-group">
-						<input type="hidden" name="student_id_generate" id="student_id_generate" value="<?php echo $student_id_generate; ?>" class="form-control ">
-						<label>Student Name<font style="color:red"><b>*</b></font></label>
-						<input type="text"  name="student_name" id="student_name" required  placeholder="Student Name"  value="" class="form-control new_student">
-					</div>
-				</div>
-				<div class="col-md-3">		
-					<div class="form-group">
-						<label>Student Contact<font style="color:red"><b>*</b></font></label>
-						<input type="tel" minlength="10" maxlength="10" name="student_contact_number" placeholder="Student Contact" oninput="sms_contact(this.value);" value="" id="student_father_contact_number" class="form-control new_student">
-					</div>
-				</div>
-				<div class="col-md-3">		
-					<div class="form-group">
-						<label>Student Email ID<font style="color:red"><b>*</b></font></label>
-						<input type="email" name="student_email_id" placeholder="Email ID" value="" class="form-control new_student">
-					</div>
-				</div>
-				<div class="col-md-3 ">
-					<div class="form-group">
-						<label><?php echo 'Father Name'; ?></label>
-						<input type="text"  name="student_father_name" id="p" placeholder="<?php echo 'Father Name'; ?>"  value="" class="form-control new_student">
-					</div>
-			    </div>
-		
-		
-				<div class="col-md-3 ">	
-					<div class="form-group" >
-					  <label><?php echo 'Date Of Birth'; ?><font style="color:red"><b>*</b></font></label>
-					  <input type="date"  name="student_date_of_birth" value="" class="form-control new_student" required>
-					</div>
-				</div>
+
+
 				<div class="col-md-3">				
-					<div class="form-group" >
-					  <label ><?php echo 'Gender'; ?></label><br>
-                      <select class="form-control new_student" name="student_gender" id="student_gender">
-						<option value="Male">Male</option>
-						<option value="Female">Female</option>
-						<option value="Other">Other</option>
+					<div class="form-group">
+					  <label>Student Old New</label>
+					  <select class="form-control" name="stuent_old_or_new">
+					  <option value="New"><?php echo "New"; ?></option>
+					  <option value="Old"><?php echo "Old"; ?></option>
 					  </select>
-					
 					</div>
 				</div>
+
+
+
+
+
+				
 				<div class="col-md-3 ">				
-					<div class="form-group" >
-					  <label ><?php echo 'Date Of Admission'; ?></label>
-					  <input type="date"  name="student_date_of_admission" placeholder=""  value="<?php echo date('Y-m-d') ?>" class="form-control">
-					</div>
-				</div>	
-				<div class="col-md-3">
 					<div class="form-group">
-						<label>Address/City/State</label>
-						<input type="text"  name="student_address"  id="student_address"  placeholder="Address/City/State"  value="" class="form-control">
-					</div>
-				</div>
-				<div class="col-md-2">	
-					<div class="form-group">
-					  <label><?php echo 'Student Photo'; ?></label>
-					  <input type="file" name="student_image" id="student_image" placeholder="" onchange="check_file_type(this,'student_image','show_student_photo','image');" class="form-control" accept=".gif, .jpg, .jpeg, .png" value="">
-					</div>
-				</div>
-				<div class="col-md-1">	
-					<div class="form-group">
-					   <img id="show_student_photo" src='<?php echo $coaching_software_path; ?>images/student_blank.png' width='60px' height='60px'>
-					</div>
-				</div>
-								<div class="col-md-3 ">				
-					<div class="form-group">
-					  <label>Course<font style="color:red"><b>*</b></font></label>
-					 	<select name="course_code" id="course_code" class="form-control" onchange="for_subject();" required>
+					  <label>Class<font style="color:red"><b>*</b></font></label>
+					 	<select name="class_code" id="class_code" class="form-control" onchange="" required>
 							<option value="">Select</option>
 
 
@@ -265,51 +252,394 @@ $registration_id=$row['registration_id'];
 						$run=mysqli_query($conn37,$que);
 						while($row=mysqli_fetch_assoc($run)){
 						$s_no = $row['s_no'];
-						$coaching_info_courses_name = $row['coaching_info_courses_name'];
-						$coaching_info_courses_code = $row['coaching_info_courses_code'];
+						$school_info_class_name = $row['school_info_class_name'];
+						$school_info_class_code = $row['school_info_class_code'];
 						?>
 
 
 
-					  <option value="<?php echo $coaching_info_courses_code;?>"><?php echo $coaching_info_courses_name;?></option>
+					  <option value="<?php echo $school_info_class_code;?>"><?php echo $school_info_class_name;?></option>
 					  <?php } ?>
 					  </select>
 					  <input type="hidden" name="my_subject_name" id="my_subject_name" />
 					</div>
 				</div>
 				
-				<!-- <div class="col-md-12">
-				<div class="col-md-3" style="float:right;">
-				<input type="checkbox" name="" id="subject" onclick="for_check(this.id);" class="" value="" /> <span style="color:red;">All Check / Uncheck</span>
-				</div>
-				</div> -->
-				
-				<!-- <div class="col-md-12">
-				<div class="col-md-10 col-md-offset-1" style="height: 50px;border:1px solid;border-radius:20px;" id="subject_detail">
-				<?php
-				$query="select * from coaching_courses_subject";
-				$result=mysqli_query($conn37,$query);
-				while($row=mysqli_fetch_assoc($result)){
-				$coaching_info_courses_subject_name = $row['coaching_info_courses_subject_name'];
-				$coaching_info_courses_subject_code = $row['coaching_info_courses_subject_code'];
-				?>
-				<div class="col-md-3">
-				<input type="checkbox" name="" id="<?php echo $coaching_info_courses_subject_code; ?>" onclick="for_check1();" class="subject" value="<?php echo $coaching_info_courses_subject_code; ?>" /> <?php echo $coaching_info_courses_subject_name; ?>
-				</div>
-				<?php } ?>
-				</div>
-				</div>				 -->
-				
-				
-				<!-- <div class="col-md-12">
-					<div class="col-md-8">	
-						<label><input type="checkbox" name="myCheck" id="myCheck"  onclick="myFunction()">&nbsp;&nbsp;&nbsp;<?php echo 'Check For Message'; ?></label>
-						<div class="form-group" id="text" style="display:none">
-					  <input type="text" name="sms" placeholder="" id="contact"  class="form-control">
-					  <input type="hidden" name="send_sms" placeholder="" id="send_sms"  class="form-control">
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-3 ">
+						<div class="form-group">
+						  <input type="hidden" name="student_id_generate" id="student_id_generate" value="<?php echo $student_id_generate; ?>" class="form-control ">
+						  <label><?php echo "Student Name"; ?><font style="color:red"><b>*</b></font></label>
+						   <input type="text"  name="student_name" id="student_name" required  placeholder="<?php echo "Student Name"; ?>"  value="" class="form-control new_student">
 						</div>
+				</div>
+
+
+
+
+
+
+
+
+
+				<div class="col-md-3 ">
+					<div class="form-group">
+						<label><?php echo 'Father Name'; ?></label>
+						<input type="text"  name="student_father_name" id="p" placeholder="<?php echo 'Father Name'; ?>"  value="" class="form-control new_student">
 					</div>
-				</div> -->
+			    </div>
+
+
+					
+				<div class="col-md-3 ">
+					<div class="form-group">
+						<label><?php echo 'Mother Name'; ?></label>
+						<input type="text"  name="student_mother_name" id="p" placeholder="<?php echo 'Mother Name'; ?>"  value="" class="form-control new_student">
+					</div>
+			    </div>
+
+
+				<div class="col-md-3">		
+						<div class="form-group">
+						  <label><?php echo "Father Contact No1"; ?><font style="color:red"><b>*</b></font></label>
+						   <input type="number" minlength="10" maxlength="10" name="student_father_contact_number" placeholder="<?php echo "Father Contact No1"; ?>" oninput="sms_contact(this.value);" value="" id="student_father_contact_number" class="form-control new_student">
+						</div>
+				</div>
+
+
+				<div class="col-md-3">		
+						<div class="form-group">
+						  <label><?php echo "Father Contact No2"; ?></label>
+				<input type="number" minlength="10" maxlength="10" name="student_father_contact_number2" placeholder="<?php echo "Father Contact No2"; ?>"  value="" id="student_father_contact_number2" class="form-control new_student" >
+						</div>
+				</div>
+
+
+				<div class="col-md-3 ">	
+					<div class="form-group" >
+					  <label><?php echo "Date Of Birth"; ?><font style="color:red"><b>*</b></font></label>
+					  <input type="date"  name="student_date_of_birth" placeholder="" oninput="get_dob_in_words(this.value);" id="student_date_of_birth" value="" class="form-control new_student" required>	
+					</div>
+				</div>
+				
+				
+
+				<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Dob In Word"; ?></label>
+						   <input type="text"  id="student_date_of_birth_in_word1" name="student_date_of_birth_in_word"  value="" class="form-control" placeholder="<?php echo "Dob In Word"; ?>" readonly >
+				        </div>
+				</div>
+
+
+				
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label ><?php echo 'Gender'; ?></label><br>
+                      <select class="form-control new_student" name="student_gender" id="student_gender">
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+						<option value="Other">Other</option>
+					  </select>
+					
+					</div>
+				</div>
+
+
+				
+				<div class="col-md-3 ">				
+					<div class="form-group" >
+					  <label ><?php echo 'Date Of Admission'; ?></label>
+					  <input type="date"  name="student_date_of_admission" placeholder=""  value="<?php echo date('Y-m-d') ?>" class="form-control">
+					</div>
+				</div>	
+
+
+				<div class="col-md-3 ">				
+					 <div class="form-group" >
+					  <label><?php echo "Admission Type"; ?></label>
+					  <select class="form-control" name="student_admission_type" id="student_admission_type">
+					  <option value="Regular">Regular</option>
+					  <option value="Private">Private</option>
+					  </select>
+					</div>
+				 </div>
+
+
+				
+
+
+				 <div class="col-md-3">				
+					<div class="form-group">
+					  <label><?php echo "Admission Scheme"; ?></label>
+					  <select class="form-control" name="student_admission_scheme">
+					  <option value="NON-RTE">NON-RTE</option>
+					  <option value="RTE">RTE</option>
+					  </select>
+					</div>
+				</div>
+
+
+
+
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label>Fee Category</label>
+					  <select class="form-control" name="student_fee_category">
+                    <?php
+                    $que1="select * from school_info_fee_category where category_name!=''";
+                    $run1=mysqli_query($conn37,$que1) or die(mysqli_error($conn37));
+                    while($row1=mysqli_fetch_assoc($run1)){
+                    $category_name = $row1['category_name'];
+	                $category_name_hindi = $row1['category_name_hindi'];
+	                $category_code = $row1['category_code'];
+                    ?>
+					  <option value="<?php echo $category_name.'|?|'.$category_code; ?>"><?php echo $category_name; ?></option>
+					<?php } ?>
+					  </select>
+					  </div>
+				</div>
+					
+
+
+
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label><?php echo "Bus"; ?></label>
+					  <select class="form-control"  name="student_bus">
+					    <option value="No">No</option>
+					  <option value="Yes">Yes</option>
+					  </select>
+					  </div>
+				</div>
+
+
+
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label><?php echo "Hostel"; ?></label>
+					 <select class="form-control"  name="student_hostel">
+					    <option value="No">No</option>
+					  <option value="Yes">Yes</option>
+					  </select>
+					  </div>
+				</div>
+
+
+
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label><?php echo "Library"; ?></label>
+					  <select class="form-control"  name="student_library">
+					    <option value="No">No</option>
+					  <option value="Yes">Yes</option>
+					  </select>
+					  </div>
+				</div>
+
+
+
+	
+				<!-- <?php
+				$que011="select fees_type from school_info_general";
+			    $run011=mysqli_query($conn37,$que011);
+			    while($row011=mysqli_fetch_assoc($run011)){
+			    $fees_type=$row011['fees_type'];
+				}
+				?> -->
+				
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label><?php echo "Registration Fees"; ?></label>
+					  <input type="text"  name="student_registration_fee" placeholder="<?php echo "Registration Fees"; ?>"  value="" class="form-control">
+					</div>
+				</div>
+
+
+				<div class="col-md-3">				
+					<div class="form-group" >
+					  <label><?php echo "Sms Contact No"; ?></label>
+					  <input type="text"  name="student_sms_contact_number" id="student_sms_contact_number" placeholder="<?php echo "Sms Contact No"; ?>"  value="" class="form-control">
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+<div class="col-md-12">
+				<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Student Address"; ?></label>
+						   <input type="text"  name="student_adress"  id="student_adress"    value="<?php echo "student adress"; ?>" class="form-control">
+						</div>
+				</div>
+							<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Village/City"; ?></label>
+						   <input type="text"  name="student_city"  id="student_city"    value="<?php echo "student city"; ?>" class="form-control">
+						</div>
+				</div>
+							<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Block"; ?></label>
+						   <input type="text"  name="student_block"  id="student_block"    value="<?php echo "student block"; ?>" class="form-control">
+						</div>
+				</div>
+							<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "District"; ?></label>
+						   <input type="text"  name="student_district"  id="student_district"    value="<?php echo "student district"; ?>" class="form-control">
+						</div>
+				</div>
+							<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "State"; ?></label>
+						   <input type="text"  name="student_state"  id="student_state"    value="<?php echo "student state"; ?>" class="form-control">
+						
+						</div>
+				</div>
+							<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Pincode"; ?></label>
+						   <input type="text"  name="student_pincode"  id="student_pincode"    value="<?php echo "student pincode"; ?>" class="form-control">
+						</div>
+				</div>
+					<div class="col-md-3">
+						<div class="form-group">
+						  <label><?php echo "Landmark"; ?></label>
+						   <input type="text"  name="student_landmark"  id="student_landmark"    value="<?php echo "student landmark"; ?>" class="form-control">
+						</div>
+				</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="col-md-12 ">
+				<div class="col-md-3">	
+					<div class="form-group">
+					  <label><?php echo "Student Photo"; ?></label>
+					  <input type="file" name="student_photo" id="student_photo" placeholder="" onchange="check_file_type(this,'student_photo','show_student_photo','image');" class="form-control" accept=".gif, .jpg, .jpeg, .png" value="">
+					</div>
+				</div>
+				<div class="col-md-1">	
+					<div class="form-group">
+					   <img id="show_student_photo" src='<?php echo $coaching_software_path; ?>images/student_blank.png' width='60px' height='60px'>
+					</div>
+				</div>
+				<div class="col-md-3">	
+					<div class="form-group">
+					  <label>Father Photo</label>
+					  <input type="file" name="father_photo" id="father_photo" placeholder="" onchange="check_file_type(this,'father_photo','show_father_photo','image');"class="form-control" accept=".gif, .jpg, .jpeg, .png" value="">
+					</div>
+				</div>
+				<div class="col-md-1">	
+					<div class="form-group">
+					   <img id="show_father_photo" src='<?php echo $coaching_software_path; ?>images/student_blank.png' width='60px' height='60px'>
+					</div>
+				</div>
+					<div class="col-md-3">	
+					<div class="form-group">
+					  <label>Mother Photo</label>
+					  <input type="file" name="mother_photo" id="mother_photo" placeholder="" onchange="check_file_type(this,'mother_photo','show_mother_photo','image');"class="form-control" accept=".gif, .jpg, .jpeg, .png" value="">
+					</div>
+				</div>
+				<div class="col-md-1">	
+					<div class="form-group">
+					   <img id="show_mother_photo" src='<?php echo $coaching_software_path; ?>images/student_blank.png' width='60px' height='60px'>
+					</div>
+				</div>
+				</div>
+
+
+
+
+
+				
+				<div class="col-md-12 ">
+				<div class="col-md-3 ">
+						<div class="form-group">
+						  <label><?php echo "Remark 1"; ?></label>
+						   <input type="text"  name="student_remark_1" placeholder="<?php echo "Remark 1"; ?>"  value="" class="form-control">
+						</div>
+			    </div>
+				<div class="col-md-3 ">
+					<div class="form-group">
+					  <label><?php echo "Remark 2"; ?></label>
+					   <input type="text"  name="student_remark_2" placeholder="<?php echo "Remark 2"; ?>"  value="" class="form-control">
+					</div>
+			    </div>
+							<div class="col-md-3 ">
+						<div class="form-group">
+						  <label><?php echo "Remark 3"; ?></label>
+						   <input type="text"  name="student_remark_3" placeholder="<?php echo "Remark 3"; ?>"  value="" class="form-control">
+						</div>
+			    </div>
+							<div class="col-md-3 ">
+						<div class="form-group">
+						  <label><?php echo "Remark 4"; ?></label>
+						   <input type="text"  name="student_remark_4" placeholder="<?php echo "Remark 4"; ?>"  value="" class="form-control">
+						</div>
+			    </div>
+				</div>
+
+
+
+
+
+				
+				<div class="col-md-12 ">
+						<div class="col-md-8 ">	
+				<label><input type="checkbox" name="myCheck" id="myCheck"  onclick="myFunction()">&nbsp;&nbsp;&nbsp;<?php echo "Check For Message"; ?></label>
+				   <div class="form-group" id="text" style="display:none">
+					  <input type="text"   name="sms" placeholder="" id="contact"  class="form-control">
+					  <input type="hidden"   name="send_sms" placeholder="" id="send_sms"  class="form-control">
+					 
+					</div>
+				</div>
+				</div>
+
+
+
+
+
+
+
 
 
 				<div class="col-md-12">
