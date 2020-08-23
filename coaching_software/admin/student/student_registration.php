@@ -190,13 +190,41 @@ e.preventDefault();
       });
 
 </script>	
-<?php
-$query="select * from login";
+
+
+
+<!-- <?php
+$query="select registration_id from login where session_value='$session1' and registration_id!='' ORDER BY s_no DESC LIMIT 0, 1";
 $run=mysqli_query($conn37,$query);
+$registration_id=1;
 while($row=mysqli_fetch_assoc($run)){
-$registration_id=$row['registration_id'];	
+$registration_id=1+$row['registration_id'];	
+}
+?> -->
+
+
+<?php
+ $query="select student_registration_number from registration_details where session_value='$session1' and student_registration_number!='' ORDER BY s_no DESC LIMIT 0, 1";
+$run=mysqli_query($conn37,$query);
+$registration_id=1;
+while($row=mysqli_fetch_assoc($run)){
+ $registration_id=1+$row['student_registration_number'];
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Main content -->
     <section class="content">
       <!-- Small boxes (Stat box) -->

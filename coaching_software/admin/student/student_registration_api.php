@@ -84,32 +84,32 @@ include("../attachment/image_compression_upload.php");
     $student_roll_no=$y.$class_roll_new;
 	
 
-	// $query11="insert into student_documents(student_roll_no) values('$student_roll_no')";
-	// mysqli_query($conn37,$query11);
+	$query11="insert into student_documents(student_roll_no) values('$student_roll_no')";
+	mysqli_query($conn37,$query11);
 
-	// if($student_image!=''){
-	// $imagename = $_FILES['student_image']['name'];
-	// $size = $_FILES['student_image']['size'];
-    // $uploadedfile = $_FILES['student_image']['tmp_name'];
+	if($student_image!=''){
+	$imagename = $_FILES['student_image']['name'];
+	$size = $_FILES['student_image']['size'];
+    $uploadedfile = $_FILES['student_image']['tmp_name'];
 	
-	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_image","student_documents","student_roll_no");
-	// }
+	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_image","student_documents","student_roll_no");
+	}
 		
-    // if($father_image!=''){
-	// $imagename = $_FILES['father_photo']['name'];
-	// $size = $_FILES['father_photo']['size'];
-	// $uploadedfile = $_FILES['father_photo']['tmp_name'];
+    if($father_image!=''){
+	$imagename = $_FILES['father_photo']['name'];
+	$size = $_FILES['father_photo']['size'];
+	$uploadedfile = $_FILES['father_photo']['tmp_name'];
 	
-	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_father_image","student_documents","student_roll_no");
-	// }
+	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_father_image","student_documents","student_roll_no");
+	}
 
-	// if($mother_image!=''){
-	// $imagename = $_FILES['mother_photo']['name'];
-	// $size = $_FILES['mother_photo']['size'];
-	// $uploadedfile = $_FILES['mother_photo']['tmp_name'];
+	if($mother_image!=''){
+	$imagename = $_FILES['mother_photo']['name'];
+	$size = $_FILES['mother_photo']['size'];
+	$uploadedfile = $_FILES['mother_photo']['tmp_name'];
 	
-	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_mother_image","student_documents","student_roll_no");
-	// }
+	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_mother_image","student_documents","student_roll_no");
+	}
 
 
 
