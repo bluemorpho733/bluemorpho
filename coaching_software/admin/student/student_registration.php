@@ -180,8 +180,6 @@ e.preventDefault();
             cache: false,
             processData: false,
             success: function(detail){
-				alert(detail);
-				   $("#p").html(detail);
                var res=detail.split("|?|");
 			   if(res[1]=='success'){
 				   alert('Successfully Complete');

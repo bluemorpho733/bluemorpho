@@ -84,47 +84,37 @@ include("../attachment/image_compression_upload.php");
     $student_roll_no=$y.$class_roll_new;
 	
 
-	$query11="insert into student_documents(student_roll_no) values('$student_roll_no')";
-	mysqli_query($conn37,$query11);
+	// $query11="insert into student_documents(student_roll_no) values('$student_roll_no')";
+	// mysqli_query($conn37,$query11);
 
-	if($student_image!=''){
-	$imagename = $_FILES['student_image']['name'];
-	$size = $_FILES['student_image']['size'];
-    $uploadedfile = $_FILES['student_image']['tmp_name'];
+	// if($student_image!=''){
+	// $imagename = $_FILES['student_image']['name'];
+	// $size = $_FILES['student_image']['size'];
+    // $uploadedfile = $_FILES['student_image']['tmp_name'];
 	
-	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_image","student_documents","student_roll_no");
-	}
+	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_image","student_documents","student_roll_no");
+	// }
 		
-    if($father_image!=''){
-	$imagename = $_FILES['father_photo']['name'];
-	$size = $_FILES['father_photo']['size'];
-	$uploadedfile = $_FILES['father_photo']['tmp_name'];
+    // if($father_image!=''){
+	// $imagename = $_FILES['father_photo']['name'];
+	// $size = $_FILES['father_photo']['size'];
+	// $uploadedfile = $_FILES['father_photo']['tmp_name'];
 	
-	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_father_image","student_documents","student_roll_no");
-	}
+	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_father_image","student_documents","student_roll_no");
+	// }
 
-	if($mother_image!=''){
-	$imagename = $_FILES['mother_photo']['name'];
-	$size = $_FILES['mother_photo']['size'];
-	$uploadedfile = $_FILES['mother_photo']['tmp_name'];
+	// if($mother_image!=''){
+	// $imagename = $_FILES['mother_photo']['name'];
+	// $size = $_FILES['mother_photo']['size'];
+	// $uploadedfile = $_FILES['mother_photo']['tmp_name'];
 	
-	camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_mother_image","student_documents","student_roll_no");
-	}
+	// camera_code($size,$imagename,$uploadedfile,$student_roll_no,"student_mother_image","student_documents","student_roll_no");
+	// }
 
 
 
 
-	$quer="insert into registration_details(student_id_generate,student_registration_number,stuent_old_or_new,class_code,my_subject_name,
-	student_name,student_father_name,student_mother_name,student_father_contact_number,student_father_contact_number2,
-	student_date_of_birth,student_date_of_birth_in_word,student_gender,student_date_of_admission,student_admission_type,student_admission_scheme,
-	student_fee_category,student_bus,student_hostel,student_library,student_registration_fee,student_sms_contact_number,student_adress,student_city,
-	student_block,student_district,student_state,student_pincode,student_landmark,session_value)
-	 values('$student_id_generate','$student_registration_number','$stuent_old_or_new','$class_code','$my_subject_name','$student_name',
-	 '$student_father_name','$student_mother_name','$student_father_contact_number','$student_father_contact_number2',
-	 '$student_date_of_birth','$student_date_of_birth_in_word','$student_gender','$student_date_of_admission','$student_admission_type',
-	 '$student_admission_scheme','$student_fee_category','$student_bus','$student_hostel','$student_library','$student_registration_fee','$student_sms_contact_number',
-	 '$student_adress','$student_city','$student_block','$student_district','$student_state','$student_pincode',
-	 '$student_landmark','$session1')";
+	$quer="insert into registration_details(student_registration_number,stuent_old_or_new,class_code,my_subject_name,student_name,student_father_name,student_mother_name,student_father_contact_number,student_father_contact_number2,student_date_of_birth,student_date_of_birth_in_word,student_gender,student_date_of_admission,student_admission_type,student_admission_scheme,student_fee_category,student_bus,student_hostel,student_library,student_registration_fee,student_sms_contact_number,student_adress,student_city,student_block,student_district,student_state,student_pincode,student_landmark,session_value) values('$student_registration_number','$stuent_old_or_new','$class_code','$my_subject_name','$student_name','$student_father_name','$student_mother_name','$student_father_contact_number','$student_father_contact_number2','$student_date_of_birth','$student_date_of_birth_in_word','$student_gender','$student_date_of_admission','$student_admission_type','$student_admission_scheme','$student_fee_category','$student_bus','$student_hostel','$student_library','$student_registration_fee','$student_sms_contact_number','$student_adress','$student_city','$student_block','$student_district','$student_state','$student_pincode','$student_landmark','$session1')";
 
 
 
@@ -152,15 +142,15 @@ include("../attachment/image_compression_upload.php");
 
 
 
-    $quer12="update login set student_id_generate='$student_id_generate',registration_id='$student_registration_number'";
-    mysqli_query($conn37,$quer12);
+    // $quer12="update login set student_id_generate='$student_id_generate',registration_id='$student_registration_number'";
+    // mysqli_query($conn37,$quer12);
    
     if(mysqli_query($conn37,$quer))
 	{
-	if($send_sms=="Yes"){
-	include("../sms/sms.php");
-	sendDNDSMS($student_contact_number,$sms);	
-	}
+	// if($send_sms=="Yes"){
+	// include("../sms/sms.php");
+	// sendDNDSMS($student_contact_number,$sms);	
+	// }
 	echo "|?|success|?|";
 	}
 ?>	
