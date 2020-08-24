@@ -4,16 +4,16 @@
                 <thead class="my_background_color">
 				<tr>
 				  <th>#</th>
-				  <th><?php echo $language['Student Name']; ?></th>
-				  <th><?php echo $language['Father Name']; ?></th>
+				  <th><?php echo "Student Name"; ?></th>
+				  <th><?php echo "Father Name"; ?></th>
 				  <th>Course</th>
-				  <th><?php echo $language['Registration Date']; ?></th>
+				  <th><?php echo "Registration Date"; ?></th>
                   <th>Update By</th>
                   <th>Date</th>
                   
-                 <th><?php echo $language['Make Admission']; ?></th>
-                 <th><?php echo $language ['Print']; ?></th>
-				 <th><?php echo $language['Delete']; ?></th>
+                 <th><?php echo "Make Admission"; ?></th>
+                 <th><?php echo "Print"; ?></th>
+				 <th><?php echo "Delete"; ?></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,7 +31,7 @@ $run=mysqli_query($conn37,$que);
 while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
-        $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.coaching_info_courses_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active'$condition ORDER BY student_admission_info.s_no DESC";
+        $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active'$condition ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
                 $serial_no=0;
                 while($row=mysqli_fetch_assoc($run)){

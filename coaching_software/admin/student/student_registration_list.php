@@ -70,17 +70,28 @@ success: function(detail){
             <div class="box-body">
 			    <div class="col-md-3">	
 					<div class="form-group">
-					    <label>Course Name</label>
+					    <label>Class</label>
 					 	<select name="course_code" class="form-control" onchange="for_list(this.value);" required>
 							<option value="All">All</option>
+
+
 							<?php
 							$que="select * from coaching_courses";
 							$run=mysqli_query($conn37,$que);
 							while($row=mysqli_fetch_assoc($run)){
 							$s_no = $row['s_no'];
-							$coaching_info_courses_name = $row['coaching_info_courses_name'];
-							$coaching_info_courses_code = $row['coaching_info_courses_code'];
+							$coaching_info_courses_name = $row['school_info_class_name'];
+							$coaching_info_courses_code = $row['school_info_class_code'];
 							?>
+
+
+
+                      
+
+
+
+
+							
 							<option value="<?php echo $coaching_info_courses_code;?>"><?php echo $coaching_info_courses_name;?></option>
 							<?php } ?>
 						</select>
@@ -116,7 +127,7 @@ while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-		$que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.coaching_info_courses_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
+		 $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;
 		while($row=mysqli_fetch_assoc($run)){
