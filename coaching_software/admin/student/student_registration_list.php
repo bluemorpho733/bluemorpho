@@ -121,23 +121,24 @@ success: function(detail){
                 </thead>
                 <tbody>
                 <?php	
-	$que="select * from coaching_info_pdf_info";
+$que="select * from coaching_info_pdf_info";
 $run=mysqli_query($conn37,$que);
 while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-		 $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
+  $que="select * from registration_details where student_status=' ' and session_value='$session1' ";
+	//  $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;
 		while($row=mysqli_fetch_assoc($run)){
 		$s_no=$row['s_no'];
 		$student_name=$row['student_name'];
-		$coaching_info_courses_name=$row['coaching_info_courses_name'];
+		// $coaching_info_courses_name=$row['coaching_info_courses_name'];
 		$student_father_name=$row['student_father_name'];
-		$course_code=$row['course_code'];
+		$course_code=$row['class_code'];
 		$student_date_of_birth=$row['student_date_of_birth'];
-		$student_roll_no=$row['student_roll_no'];
+		// $student_roll_no=$row['student_roll_no'];
 		$student_date_of_admission=$row['student_date_of_admission'];
 		$student_registration_fee=$row['student_registration_fee'];
 		     	
