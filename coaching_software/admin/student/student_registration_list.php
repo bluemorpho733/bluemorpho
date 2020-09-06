@@ -127,7 +127,7 @@ while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-  $que="select * from registration_details where student_status=' ' and session_value='$session1' ";
+  $que="select * from registration_details where student_status=' ' and session_value='$session1'";
 	//  $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;
@@ -160,7 +160,7 @@ while($row=mysqli_fetch_assoc($run)){
 	<td><?php echo $update_change; ?></td>
     <td><?php echo $last_updated_date; ?></td>
 
-    <td><button type="button" onclick="post_content('student/student_admission','<?php echo 'student_roll_no='.$student_roll_no; ?>')" class="btn btn-default my_background_color">
+    <td><button type="button" onclick="post_content('student/student_admission','<?php echo 's_no='.$s_no; ?>')" class="btn btn-default my_background_color">
     <?php echo 'Make Admission'; ?></button></td>
 	<td><a href='<?php echo $pdf_path; ?>registration_form/<?php echo $registration_form_pdf; ?>?id=<?php echo $student_roll_no; ?>' target="_blank"><button type="button" class="btn btn-default my_background_color"><?php echo 'Print'; ?></button></a></td>
 	<td><button type="button" onclick="return valid('<?php echo $student_roll_no; ?>','<?php echo $student_date_of_admission; ?>','<?php echo $student_registration_fee; ?>')" class="btn btn-default my_background_color">
