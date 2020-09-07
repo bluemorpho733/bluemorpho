@@ -172,7 +172,7 @@ e.preventDefault();
 	window.scrollTo(0, 0);
      $("#get_content").html(loader_div);
         $.ajax({
-            url: access_link+"student/student_registration_api.php",
+            url: access_link+"student/student_admission_api.php",
             type: "POST",
             data: formdata,
             mimeTypes:"multipart/form-data",
@@ -183,7 +183,7 @@ e.preventDefault();
                var res=detail.split("|?|");
 			   if(res[1]=='success'){
 				   alert('Successfully Complete');
-				   get_content('student/student_registration_list');
+				   get_content('student/student_admission_list');
             }
 			}
          });
@@ -451,7 +451,7 @@ e.preventDefault();
 	                $category_name_hindi = $row1['category_name_hindi'];
 	                $category_code = $row1['category_code'];
                     ?>
-					  <option value="<?php echo $category_name.'|?|'.$category_code; ?>"><?php echo $category_name; ?></option>
+					  <option <?php if($student_fee_category==$category_name.'|?|'.$category_code){ echo 'selected'; } ?> value="<?php echo $category_name.'|?|'.$category_code; ?>"><?php echo $category_name; ?></option>
 					<?php } ?>
 					  </select>
 					  </div>
@@ -464,8 +464,8 @@ e.preventDefault();
 					<div class="form-group" >
 					  <label><?php echo "Bus"; ?></label>
 					  <select class="form-control"  name="student_bus">
-					    <option value="No">No</option>
-					  <option value="Yes">Yes</option>
+					    <option <?php if($student_bus=='No'){ echo 'selected'; } ?> value="No">No</option>
+					  <option <?php if($student_bus=='Yes'){ echo 'selected'; } ?> value="Yes">Yes</option>
 					  </select>
 					  </div>
 				</div>
@@ -476,8 +476,8 @@ e.preventDefault();
 					<div class="form-group" >
 					  <label><?php echo "Hostel"; ?></label>
 					 <select class="form-control"  name="student_hostel">
-					    <option value="No">No</option>
-					  <option value="Yes">Yes</option>
+					    <option <?php if($student_hostel=='No'){ echo 'selected'; } ?> value="No">No</option>
+					  <option <?php if($student_hostel=='Yes'){ echo 'selected'; } ?> value="Yes">Yes</option>
 					  </select>
 					  </div>
 				</div>
@@ -488,8 +488,8 @@ e.preventDefault();
 					<div class="form-group" >
 					  <label><?php echo "Library"; ?></label>
 					  <select class="form-control"  name="student_library">
-					    <option value="No">No</option>
-					  <option value="Yes">Yes</option>
+					    <option <?php if($student_library=='No'){ echo 'selected'; } ?> value="No">No</option>
+					  <option <?php if($student_library=='Yes'){ echo 'selected'; } ?> value="Yes">Yes</option>
 					  </select>
 					  </div>
 				</div>
@@ -508,7 +508,7 @@ e.preventDefault();
 				<div class="col-md-3">				
 					<div class="form-group" >
 					  <label><?php echo "Registration Fees"; ?></label>
-					  <input type="text"  name="student_registration_fee" placeholder="<?php echo "Registration Fees"; ?>"  value="" class="form-control">
+					  <input type="text"  name="student_registration_fee" placeholder="<?php echo "Registration Fees"; ?>"  value="<?php echo $student_registration_fee; ?>" class="form-control">
 					</div>
 				</div>
 
@@ -516,7 +516,7 @@ e.preventDefault();
 				<div class="col-md-3">				
 					<div class="form-group" >
 					  <label><?php echo "Sms Contact No"; ?></label>
-					  <input type="text"  name="student_sms_contact_number" id="student_sms_contact_number" placeholder="<?php echo "Sms Contact No"; ?>"  value="" class="form-control">
+					  <input type="text"  name="student_sms_contact_number" id="student_sms_contact_number" placeholder="<?php echo "Sms Contact No"; ?>"  value="<?php echo $student_sms_contact_number; ?>" class="form-control">
 					</div>
 				</div>
 
@@ -532,44 +532,44 @@ e.preventDefault();
 				<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "Student Address"; ?></label>
-						   <input type="text"  name="student_adress"  id="student_adress"    value="<?php echo "student adress"; ?>" class="form-control">
+						   <input type="text"  name="student_adress"  id="student_adress"  value="<?php echo $student_adress; ?>" class="form-control">
 						</div>
 				</div>
 							<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "Village/City"; ?></label>
-						   <input type="text"  name="student_city"  id="student_city"    value="<?php echo "student city"; ?>" class="form-control">
+						   <input type="text"  name="student_city"  id="student_city"    value="<?php echo $student_city; ?>" class="form-control">
 						</div>
 				</div>
 							<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "Block"; ?></label>
-						   <input type="text"  name="student_block"  id="student_block"    value="<?php echo "student block"; ?>" class="form-control">
+						   <input type="text"  name="student_block"  id="student_block"    value="<?php echo $student_block; ?>" class="form-control">
 						</div>
 				</div>
 							<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "District"; ?></label>
-						   <input type="text"  name="student_district"  id="student_district"    value="<?php echo "student district"; ?>" class="form-control">
+						   <input type="text"  name="student_district"  id="student_district"    value="<?php echo $student_district; ?>" class="form-control">
 						</div>
 				</div>
 							<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "State"; ?></label>
-						   <input type="text"  name="student_state"  id="student_state"    value="<?php echo "student state"; ?>" class="form-control">
+						   <input type="text"  name="student_state"  id="student_state"    value="<?php echo $student_state; ?>" class="form-control">
 						
 						</div>
 				</div>
 							<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "Pincode"; ?></label>
-						   <input type="text"  name="student_pincode"  id="student_pincode"    value="<?php echo "student pincode"; ?>" class="form-control">
+						   <input type="text"  name="student_pincode"  id="student_pincode"    value="<?php echo $student_pincode; ?>" class="form-control">
 						</div>
 				</div>
 					<div class="col-md-3">
 						<div class="form-group">
 						  <label><?php echo "Landmark"; ?></label>
-						   <input type="text"  name="student_landmark"  id="student_landmark"    value="<?php echo "student landmark"; ?>" class="form-control">
+						   <input type="text"  name="student_landmark"  id="student_landmark"    value="<?php echo $student_landmark; ?>" class="form-control">
 						</div>
 				</div>
 				</div>
