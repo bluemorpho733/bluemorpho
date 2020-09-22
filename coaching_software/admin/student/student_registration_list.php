@@ -22,12 +22,12 @@ registration_delete(student_roll_no,student_date_of_admission,student_registrati
 return false;
 }       
 } 
-	function registration_delete(student_roll_no,student_date_of_admission,student_registration_fee){
+	function registration_delete(s_no){
 
      $("#get_content").html(loader_div);
 $.ajax({
 type: "POST",
-url: access_link+"student/student_registration_delete.php?id="+student_roll_no+"&date="+student_date_of_admission+"&amount="+student_registration_fee+"",
+url: access_link+"student/student_registration_delete.php?id="+s_no,
 cache: false,
 success: function(detail){
 	  var res=detail.split("|?|");
@@ -127,7 +127,7 @@ while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-  $que="select * from registration_details where student_status=' ' and session_value='$session1'";
+  $que="select * from registration_details where student_status='' and session_value='$session1'";
 	//  $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;
@@ -138,7 +138,7 @@ while($row=mysqli_fetch_assoc($run)){
 		$student_father_name=$row['student_father_name'];
 		$course_code=$row['class_code'];
 		$student_date_of_birth=$row['student_date_of_birth'];
-		// $student_roll_no=$row['student_roll_no'];
+		$student_registration_number=$row['student_registration_number'];
 		$student_date_of_admission=$row['student_date_of_admission'];
 		$student_registration_fee=$row['student_registration_fee'];
 		     	
@@ -163,7 +163,7 @@ while($row=mysqli_fetch_assoc($run)){
     <td><button type="button" onclick="post_content('student/student_admission','<?php echo 's_no='.$s_no; ?>')" class="btn btn-default my_background_color">
     <?php echo 'Make Admission'; ?></button></td>
 	<td><a href='<?php echo $pdf_path; ?>registration_form/<?php echo $registration_form_pdf; ?>?id=<?php echo $student_roll_no; ?>' target="_blank"><button type="button" class="btn btn-default my_background_color"><?php echo 'Print'; ?></button></a></td>
-	<td><button type="button" onclick="return valid('<?php echo $student_roll_no; ?>','<?php echo $student_date_of_admission; ?>','<?php echo $student_registration_fee; ?>')" class="btn btn-default my_background_color">
+	<td><button type="button" onclick="return valid('<?php echo $s_no; ?>')" class="btn btn-default my_background_color">
     <?php echo 'Delete'; ?></button></td>
     </tr>
     <?php } ?>
