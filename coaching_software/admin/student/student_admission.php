@@ -38,25 +38,6 @@ function get_dob_in_words(dob1){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function for_stream(value2){
 		   if(value2=="11TH" || value2=="12TH"){
 $("#student_class_stream_div").show();
@@ -131,7 +112,7 @@ $("#my_subject_name").val(check_value);
 // }
 // }
 
-	function sms_contact(value1){
+function sms_contact(value1){
        
 $('#student_sms_contact_number').val(value1);
     }
@@ -166,12 +147,17 @@ function myFunction() {
 
 
 $("#my_form").submit(function(e){
+	// alert('gdsfgdsfg');
 e.preventDefault();
 
  var formdata = new FormData(this);
-	window.scrollTo(0, 0);
-     $("#get_content").html(loader_div);
+	// window.scrollTo(0, 0);
+	//  $("#get_content").html(loader_div);
+
+	// alert(detail);
+	 
         $.ajax({
+			
             url: access_link+"student/student_admission_api.php",
             type: "POST",
             data: formdata,
@@ -180,13 +166,17 @@ e.preventDefault();
             cache: false,
             processData: false,
             success: function(detail){
+
+				alert(detail);
+			
                var res=detail.split("|?|");
 			   if(res[1]=='success'){
 				   alert('Successfully Complete');
 				   get_content('student/student_admission_list');
             }
 			}
-         });
+		 });
+	
       });
 
 </script>	
@@ -200,11 +190,11 @@ e.preventDefault();
 	       <!-- general form elements disabled -->
           <div class="box box-primary my_border_top">
 		    <div class="box-header with-border ">
-            <h3 class="box-title">Student Registration</h3>
+            <h3 class="box-title">Student Admission</h3>
             </div>
             <!-- /.box-header -->
 <!------------------------------------------------Start Registration form--------------------------------------------------->
- <form name="myForm" method="post" id="my_form" enctype="multipart/form-data" action="" onsubmit="return validate();">	
+ <form name="myForm" method="POST" id="my_form" enctype="multipart/form-data" action="" onsubmit="return validate();">	
     <div class="box-body">
 
 	<?php
@@ -302,24 +292,6 @@ e.preventDefault();
 					</div>
 				</div>
 				
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -66,13 +66,13 @@ success: function(detail){
 
     <section class="content-header">
       <h1>
-        <?php echo $language['Student Management']; ?>
-        <small><?php echo $language['Control Panel']; ?></small>
+        <?php echo "Student Management"; ?>
+        <small><?php echo "Control Panel"; ?></small>
       </h1>
       <ol class="breadcrumb">
 	<li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
-	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo $language['Student']; ?></a></li>
-	  <li class="active"><?php echo $language['Student Admission List']; ?></li>
+	  <li><a href="javascript:get_content('student/students')"><i class="fa fa-graduation-cap"></i> <?php echo "Student"; ?></a></li>
+	  <li class="active"><?php echo "Student Admission List"; ?></li>
       </ol>
     </section>
 	
@@ -83,7 +83,7 @@ success: function(detail){
       <div class="row">
       <div class="box box-primary my_border_top">
             <div class="box-header with-border ">
-            <h3 class="box-title"><?php echo $language['Admission List']; ?></h3>
+            <h3 class="box-title"><?php echo "Admission List"; ?></h3>
 			
             </div>
  <div class="box-body ">
@@ -133,9 +133,9 @@ success: function(detail){
 								  <th>Admission No</th>
 								  <th>Update By</th>
 								  <th>Date</th>
-								  <th><?php echo $language['Edit']; ?></th>
-								  <th><?php echo $language['Delete']; ?></th>
-								  <th><?php echo $language['Print']; ?></th>
+								  <th><?php echo "Edit"; ?></th>
+								  <th><?php echo "Delete"; ?></th>
+								  <th><?php echo "Print"; ?></th>
 								</tr>
 						</thead>
 					<tbody>
@@ -161,8 +161,8 @@ $query="select * from coaching_courses where courses_status='Active'";
 $run1=mysqli_query($conn37,$query);
 $all_courses_name='';
 while($row1=mysqli_fetch_assoc($run1)){
-$coaching_info_courses_name=$row1['coaching_info_courses_name'];
-$coaching_info_courses_code=$row1['coaching_info_courses_code'];
+$coaching_info_courses_name=$row1['school_info_class_name'];
+$coaching_info_courses_code=$row1['school_info_class_code'];
 $all_courses_name[$coaching_info_courses_code]=$coaching_info_courses_name;
 }
   
