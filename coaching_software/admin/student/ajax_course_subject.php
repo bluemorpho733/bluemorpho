@@ -1,8 +1,8 @@
 <?php include("../attachment/session.php"); ?>  
 <option value="All">All</option>
 <?php 
-$course_code = $_GET['course_name'];
-$query="select * from coaching_courses_subject where course_code='$course_code'";
+$school_info_class_name = $_GET['school_info_class_name'];
+$query="select * from coaching_courses_subject where course_code='$school_info_class_name'";
 $result=mysqli_query($conn37,$query);
 while($row=mysqli_fetch_assoc($result)){
 $coaching_info_courses_subject_name = $row['coaching_info_courses_subject_name'];

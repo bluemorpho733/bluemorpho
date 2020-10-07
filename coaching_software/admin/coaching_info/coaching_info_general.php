@@ -17,8 +17,8 @@ while($row=mysqli_fetch_assoc($run)){
 	$coaching_info_coaching_website = $row['coaching_info_coaching_website'];	
 	$coaching_info_principal_name = $row['coaching_info_principal_name'];
 	$coaching_info_coaching_code = $row['coaching_info_coaching_code'];
-    $coaching_info_institute_type = $row['coaching_info_institute_type'];
-	$coaching_info_institute_category = $row['coaching_info_institute_category'];
+    $coaching_info_School_type = $row['coaching_info_institute_type'];
+	$coaching_info_School_category = $row['coaching_info_institute_category'];
 	$coaching_info_principal_seal = $row['coaching_info_principal_seal'];
 	$coaching_info_principal_signature = $row['coaching_info_principal_signature'];
 	$coaching_info_logo = $row['coaching_info_logo'];
@@ -37,13 +37,13 @@ while($row=mysqli_fetch_assoc($run)){
 
     <section class="content-header">
       <h1>
-        Institute Information
-        <small><?php echo $language['Control Panel']; ?></small>
+        School Information
+        <small><?php echo 'Control Panel'; ?></small>
       </h1>
       <ol class="breadcrumb">
 	  <li><a href="javascript:get_content('index_content')"><i class="fa fa-dashboard"></i> Home</a></li>
 	  <li><a href="javascript:get_content('coaching_info/coaching_info')"><i class="fa fa-graduation-cap"></i>Coaching Info</a></li>
-	  <li class="active">Institute Profile</li>
+	  <li class="active">School Profile</li>
       </ol>
     </section>
 <script>
@@ -72,13 +72,13 @@ window.scrollTo(0, 0);
          });
       });
 </script>
-    <section class="content">
+<section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
 	       <!-- general form elements disabled -->
           <div class="box box-warning">
             <div class="box-header with-border ">
-              <h3 class="box-title">Institute Profile</h3>
+              <h3 class="box-title">School Profile</h3>
             </div>
             <!-- /.box-header -->
 <!------------------------------------------------Start Registration form--------------------------------------------------->
@@ -87,82 +87,82 @@ window.scrollTo(0, 0);
 			<form method="post" enctype="multipart/form-data" action="" id="my_form">
 			  <div class="col-md-4 ">
 						<div class="form-group">
-						  <label>Institute Name<font style="color:red"><b>*</b></font></label>
-						   <input type="text"  name="coaching_info_coaching_name"   placeholder="Institute Name"  value="<?php echo $coaching_info_coaching_name; ?>" class="form-control" maxlength="40" required>
+						  <label>School Name<font style="color:red"><b>*</b></font></label>
+						   <input type="text"  name="coaching_info_coaching_name"   placeholder="School Name"  value="<?php echo $coaching_info_coaching_name; ?>" class="form-control" maxlength="40" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label><?php echo $language['State']; ?><font style="color:red"><b>*</b></font></label>				
+						  <label><?php echo 'State'; ?><font style="color:red"><b>*</b></font></label>				
 						   <input type="text"  name="coaching_info_coaching_state"   placeholder="State"  value="<?php echo $coaching_info_coaching_state; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label><?php echo $language['District']; ?><font style="color:red"><b>*</b></font></label>
+						  <label><?php echo 'District'; ?><font style="color:red"><b>*</b></font></label>
 						    <input type="text"  name="coaching_info_coaching_district"   placeholder="District"  value="<?php echo $coaching_info_coaching_district; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label><?php echo $language['City']; ?><font style="color:red"><b>*</b></font></label>
+						  <label><?php echo 'City'; ?><font style="color:red"><b>*</b></font></label>
 						   <input type="text"  name="coaching_info_coaching_city"   placeholder="City"  value="<?php echo $coaching_info_coaching_city; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label><?php echo $language['Pincode']; ?></label>
+						  <label><?php echo 'Pincode'; ?></label>
 						   <input type="text"  name="coaching_info_coaching_pincode"   placeholder="Pincode"  value="<?php echo $coaching_info_coaching_pincode; ?>" class="form-control" >
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label><?php echo $language['Landmark']; ?></label>
+						  <label><?php echo 'Landmark'; ?></label>
 						   <input type="text"  name="coaching_info_coaching_landmark"   placeholder="Landmark"  value="<?php echo $coaching_info_coaching_landmark; ?>" class="form-control" >
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label>Institute Address<font style="color:red"><b>*</b></font></label>
+						  <label>School Address<font style="color:red"><b>*</b></font></label>
 						   <input type="text"  name="coaching_info_coaching_address"   placeholder="coaching Address"  value="<?php echo $coaching_info_coaching_address; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label>Institute Contact No<font style="color:red"><b>*</b></font></label>
+						  <label>School Contact No<font style="color:red"><b>*</b></font></label>
 						   <input type="text"  name="coaching_info_coaching_contact_no"   placeholder="coaching Contact No."  value="<?php echo $coaching_info_coaching_contact_no; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4">
 						<div class="form-group">
-						  <label>Institute Email Id</label>
+						  <label>School Email Id</label>
 						   <input type="text"  name="coaching_info_coaching_email_id"   placeholder="coaching Email Id"  value="<?php echo $coaching_info_coaching_email_id; ?>" class="form-control">
 						</div>
 				</div>
 				<div class="col-md-4">
 						<div class="form-group">
-						  <label>Institute Website</label>
+						  <label>School Website</label>
 						   <input type="text"  name="coaching_info_coaching_website" placeholder="coaching Website"  value="<?php echo $coaching_info_coaching_website; ?>" class="form-control">
 						</div>
 				</div>
 				<div class="col-md-4 ">
 						<div class="form-group">
-						  <label>Institute Head<font style="color:red"><b>*</b></font></label>
-						   <input type="text"  name="coaching_info_principal_name"   placeholder="Institute Head"  value="<?php echo $coaching_info_principal_name; ?>" class="form-control" required>
+						  <label>School Head<font style="color:red"><b>*</b></font></label>
+						   <input type="text"  name="coaching_info_principal_name"   placeholder="School Head"  value="<?php echo $coaching_info_principal_name; ?>" class="form-control" required>
 						</div>
 				</div>
 				<div class="col-md-4 ">		
 						<div class="form-group">
-						  <label>Institute Code</label>
-						   <input type="text" name="coaching_info_coaching_code" placeholder="Institute Code"  value="<?php echo $coaching_info_coaching_code; ?>" class="form-control">
+						  <label>School Code</label>
+						   <input type="text" name="coaching_info_coaching_code" placeholder="School Code"  value="<?php echo $coaching_info_coaching_code; ?>" class="form-control">
 						</div>
 					</div>
 
 			 <div class="col-md-4 ">				
 					 <div class="form-group" >
-					  <label >Institute Type<font style="color:red"><b>*</b></font></label><br>
-						<select name="coaching_info_institute_type" class="form-control" required>
-					  <option value="<?php echo $coaching_info_institute_type;?>"><?php echo $coaching_info_institute_type;?></option>
+					  <label >School Type<font style="color:red"><b>*</b></font></label><br>
+						<select name="coaching_info_School_type" class="form-control" required>
+					  <option value="<?php echo $coaching_info_School_type;?>"><?php echo $coaching_info_School_type;?></option>
 					  <option value="Franchise">Franchise</option>
 					  <option value="Self Owned">Self Owned</option>
 					  </select>
@@ -170,9 +170,9 @@ window.scrollTo(0, 0);
 				</div>
               <div class="col-md-4 ">				
 				 <div class="form-group" >
-				  <label >Institute Category<font style="color:red"><b>*</b></font></label><br>
-					<select name="coaching_info_institute_category" class="form-control" required>
-				  <option value="<?php echo $coaching_info_institute_category;?>"><?php echo $coaching_info_institute_category;?></option>
+				  <label >School Category<font style="color:red"><b>*</b></font></label><br>
+					<select name="coaching_info_School_category" class="form-control" required>
+				  <option value="<?php echo $coaching_info_School_category;?>"><?php echo $coaching_info_School_category;?></option>
 				  <option value="Competitive">Competitive</option>
 				  <option value="School Level Classes">School Level Classes</option>
 				  <option value="Collage Level Classes">Collage Level Classes</option>
@@ -187,7 +187,7 @@ window.scrollTo(0, 0);
 				<div class="col-lg-12">
 				<div class="col-md-3 ">	
 					<div class="form-group" > 
-					   <label>Institute Seal</label>
+					   <label>School Seal</label>
 					  <input type="file"  id="coaching_info_principal_seal" name="coaching_info_principal_seal" placeholder="" onchange="check_file_type(this,'coaching_info_principal_seal','shwo_coaching_info_principal_seal','image');" value="" class="form-control" accept=".gif, .jpg, .jpeg, .png">
 					</div>
 				</div>
@@ -198,7 +198,7 @@ window.scrollTo(0, 0);
 				</div>
 				<div class="col-md-3 ">	
 					<div class="form-group" > 
-					   <label>Institute Head Signature</label>
+					   <label>School Head Signature</label>
 					  <input type="file"  id="coaching_info_principal_signature" name="coaching_info_principal_signature" placeholder="" onchange="check_file_type(this,'coaching_info_principal_signature','show_coaching_info_principal_signature','image');" value="" class="form-control" accept=".gif, .jpg, .jpeg, .png">
 					</div>
 				</div>
@@ -210,7 +210,7 @@ window.scrollTo(0, 0);
 				
 			 <div class="col-md-3 ">	
 				<div class="form-group" > 
-				  <label><?php echo $language['Logo']; ?></label>
+				  <label><?php echo 'Logo'; ?></label>
 					  <input type="file"  id="coaching_info_logo" name="coaching_info_logo" placeholder="" onchange="check_file_type(this,'coaching_info_logo','show_coaching_info_logo','image');" value="" class="form-control" accept=".gif, .jpg, .jpeg, .png">
 					</div>
 				</div>
@@ -226,7 +226,7 @@ window.scrollTo(0, 0);
 					</div>
 				</div>	
 				<div class="col-md-12">
-		        <center><input type="submit" name="submit" value="<?php echo $language['Submit']; ?>" class="btn btn-primary" /></center>
+		        <center><input type="submit" name="submit" value="<?php echo 'Submit'; ?>" class="btn btn-primary" /></center>
 		  </div>
 		</form>	
 		

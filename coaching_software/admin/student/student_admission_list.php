@@ -89,7 +89,7 @@ success: function(detail){
  <div class="box-body ">
  		    <div class="col-md-3">	
 					<div class="form-group">
-					    <label>Course Name</label>
+					    <label>Class</label>
 					 	<select name="course_code" class="form-control" id="course_code" onchange="get_course(this.value);" required>
 							<option value="All">All</option>
 							<?php
@@ -97,21 +97,21 @@ success: function(detail){
 							$run=mysqli_query($conn37,$que);
 							while($row=mysqli_fetch_assoc($run)){
 							$s_no = $row['s_no'];
-							$coaching_info_courses_name = $row['coaching_info_courses_name'];
-							$coaching_info_courses_code = $row['coaching_info_courses_code'];
+							$school_info_class_name = $row['school_info_class_name'];
+							$school_info_class_code = $row['school_info_class_code'];
 							?>
-							<option value="<?php echo $coaching_info_courses_code;?>"><?php echo $coaching_info_courses_name;?></option>
+							<option value="<?php echo $school_info_class_code;?>"><?php echo $school_info_class_name;?></option>
 							<?php } ?>
 						</select>
 					</div>
 			</div>
 			<div class="col-md-3">	
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label>Subject</label>
 						<select name="subject_code" class="form-control" id="get_subject" onchange='for_list();' required>
 						<option value="">Select</option>
 						</select>
-				</div>
+				</div> -->
 			</div>
 	<div class="col-xs-12">
                 <!-- /.box -->
@@ -127,7 +127,7 @@ success: function(detail){
 								  <th>#</th>
 								  <th>Student Name</th>
 								  <th>Father Name</th>
-								  <th>Course</th>
+								  <th>Class</th>
 								  <th>Father Contact No.</th>
 								  <th>Student Roll No</th>
 								  <th>Admission No</th>
@@ -167,30 +167,30 @@ $all_courses_name[$coaching_info_courses_code]=$coaching_info_courses_name;
 }
   
   
-	$que="select * from student_admission_info where registration_final='yes' and student_status='Active' and session_value='$session1' ORDER BY s_no DESC";
+	 $que="select * from student_admission_details where registration_final='yes' and student_status='Active' and session_value='$session1' ORDER BY s_no DESC";
 	$run=mysqli_query($conn37,$que);
 	$serial_no=0;
 	while($row=mysqli_fetch_assoc($run)){
 		$s_no=$row['s_no'];
 		$student_name=$row['student_name'];
 		$student_father_name=$row['student_father_name'];
-		$course_code1=$row['course_code'];
+		// $course_code1=$row['course_code'];
 		$student_date_of_birth=$row['student_date_of_birth'];
-		$student_roll_no=$row['student_roll_no'];
-		$coaching_roll_no=$row['coaching_roll_no'];
+		// $student_roll_no=$row['student_roll_no'];
+		// $coaching_roll_no=$row['coaching_roll_no'];
 		$student_date_of_admission=$row['student_date_of_admission'];
 		$student_father_contact_number=$row['student_father_contact_number'];
-		$student_admission_number=$row['student_admission_number'];
+		// $student_admission_number=$row['student_admission_number'];
 		$my_subject_name11=$row['my_subject_name'];
 		$my_subject_name22='';
 		$comma='';
 		
-		$update_change=$row['update_change'];
-		if($row['last_updated_date']!='0000-00-00'){
-		$last_updated_date=date('d-m-Y',strtotime($row['last_updated_date']));
-		}else{
-		$last_updated_date=$row['last_updated_date'];
-		}
+		// $update_change=$row['update_change'];
+		// if($row['last_updated_date']!='0000-00-00'){
+		// $last_updated_date=date('d-m-Y',strtotime($row['last_updated_date']));
+		// }else{
+		// $last_updated_date=$row['last_updated_date'];
+		// }
 
 	$serial_no++;
 
@@ -202,10 +202,10 @@ $my_subject_name1=explode(',',$my_subject_name11);
 $subject_count=0;
 $my_subject_name1[]=$my_subject_name11;
 }
-for($a=0;$a<=$subject_count;$a++){
-$my_subject_name22=$my_subject_name22.$comma.$all_subject[$my_subject_name1[$a]];
-$comma=',';
-}	
+// for($a=0;$a<=$subject_count;$a++){
+// $my_subject_name22=$my_subject_name22.$comma.$all_subject[$my_subject_name1[$a]];
+// $comma=',';
+// }	
 	
 ?>
 
@@ -213,20 +213,25 @@ $comma=',';
 				<td><?php echo $serial_no; ?></td>
 				<td><?php echo $student_name; ?></td>
 				<td><?php echo $student_father_name; ?></td>
-				<td><?php echo $all_courses_name[$course_code1]." (".$my_subject_name22.")"; ?></td>
+				<td><?php  ?></td>
+				<!-- echo $all_courses_name[$course_code1]." (".$my_subject_name22.")"; -->
 				<td><?php echo $student_father_contact_number; ?></td>
-				<td><?php echo $student_roll_no; ?></td>
-				<td><?php echo $student_admission_number; ?></td>
+				<td><?php  ?></td>
+				<!-- echo $student_roll_no; -->
+				<td><?php  ?></td>
+				<!-- echo $student_admission_number; -->
 
-				<td><?php echo $update_change; ?></td>
-				<td><?php echo $last_updated_date; ?></td>
+				<td><?php  ?></td>
+				<!-- echo $update_change; -->
+				<td><?php  ?></td>
+				<!-- echo $last_updated_date; -->
 
 				<td><button type="button" onclick="post_content('student/student_admission','<?php echo 'student_roll_no='.$student_roll_no; ?>')" class="btn btn-default my_background_color" >
-				<?php echo $language['Edit']; ?></button></td>
+				<?php echo 'Edit'; ?></button></td>
 				<td><button type="button" onclick="return valid('<?php echo $s_no; ?>');" class="btn btn-default my_background_color" >
-				<?php echo $language['Delete']; ?></button></td>
+				<?php echo 'Delete'; ?></button></td>
 				<td><a href='<?php echo $pdf_path; ?>admission_form/<?php echo $admission_form_pdf; ?>?id=<?php echo $student_roll_no; ?>' target="_blank"><button type="button" class="btn btn-default my_background_color" >
-				<?php echo $language['Print']; ?></button></a></td>
+				<?php echo 'Print'; ?></button></a></td>
 				</tr>
 				<?php } ?>
 					</tbody>
