@@ -127,7 +127,7 @@ while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-  $que="select * from registration_details where student_status='' and session_value='$session1'";
+  $que="select * from registration_details where student_status='' and registration_final='' and session_value='$session1'";
 	//  $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;

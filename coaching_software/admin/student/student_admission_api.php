@@ -9,7 +9,7 @@ include("../attachment/image_compression_upload.php");
 	   } 
 
 
-	  $student_registration_number=$_POST['student_registration_number'];
+	 $student_registration_number=$_POST['student_registration_number'];
 	 $stuent_old_or_new=$_POST['stuent_old_or_new'];
 	 $class_code = $_POST['class_code'];
 	 $my_subject_name=$_POST['my_subject_name'];
@@ -139,10 +139,12 @@ include("../attachment/image_compression_upload.php");
 
 
 
+	// registration_final
 
+	$quer45 = "update registration_details set registration_final='yes' WHERE student_registration_number='$student_registration_number'";
+	mysqli_query($conn37,$quer45);
 
-
-    // $quer12="update login set student_id_generate='$student_id_generate',registration_id='$student_registration_number'";
+    // $quer12="update registration_details set student_id_generate='$student_id_generate',registration_id='$student_registration_number'";
     // mysqli_query($conn37,$quer12);
    
     if(mysqli_query($conn37,$quer))

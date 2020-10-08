@@ -167,7 +167,7 @@ $all_courses_name[$coaching_info_courses_code]=$coaching_info_courses_name;
 }
   
   
-	 $que="select * from student_admission_details where registration_final='yes' and student_status='Active' and session_value='$session1' ORDER BY s_no DESC";
+	$que="select * from student_admission_details where registration_final='yes' and student_status='Active' and session_value='$session1' ORDER BY s_no DESC";
 	$run=mysqli_query($conn37,$que);
 	$serial_no=0;
 	while($row=mysqli_fetch_assoc($run)){
