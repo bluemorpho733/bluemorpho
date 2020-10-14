@@ -76,7 +76,7 @@ success: function(detail){
 
 
 							<?php
-							$que="select * from coaching_courses";
+							$que="select * from school_info_class_info";
 							$run=mysqli_query($conn37,$que);
 							while($row=mysqli_fetch_assoc($run)){
 							$s_no = $row['s_no'];
@@ -110,7 +110,7 @@ success: function(detail){
 				  <th>#</th>
 				  <th><?php echo 'Student Name'; ?></th>
 				  <th><?php echo 'Father Name'; ?></th>
-				  <th>Course</th>
+				  <th>Class</th>
 				  <th><?php echo 'Registration Date'; ?></th>
 				  <th>Update By</th>
                   <th>Date</th>
@@ -127,14 +127,14 @@ while($row=mysqli_fetch_assoc($run)){
 	$registration_form_pdf = $row['registration_form_pdf'];
 }	
 
-  $que="select * from registration_details where student_status='' and registration_final='' and session_value='$session1'";
+   $que="select registration_details.*,school_info_class_info.school_info_class_name from registration_details left join school_info_class_info on registration_details.class_code=school_info_class_info.school_info_class_code where student_status='' and registration_final='' and session_value='$session1' ORDER BY registration_details.s_no DESC";
 	//  $que="select * from student_admission_info left join coaching_courses on student_admission_info.course_code=coaching_courses.school_info_class_code where student_admission_info.registration_final='no' and student_admission_info.student_status='Deactive' and student_admission_info.session_value='$session1' and coaching_courses.courses_status='Active' ORDER BY student_admission_info.s_no DESC";
 		$run=mysqli_query($conn37,$que);
 		$serial_no=0;
 		while($row=mysqli_fetch_assoc($run)){
 		$s_no=$row['s_no'];
 		$student_name=$row['student_name'];
-		// $coaching_info_courses_name=$row['coaching_info_courses_name'];
+		$school_info_class_name=$row['school_info_class_name'];
 		$student_father_name=$row['student_father_name'];
 		$course_code=$row['class_code'];
 		$student_date_of_birth=$row['student_date_of_birth'];
@@ -155,7 +155,7 @@ while($row=mysqli_fetch_assoc($run)){
 	<td><?php echo $serial_no; ?></td>
 	<td><?php echo $student_name; ?></td>
 	<td><?php echo $student_father_name; ?></td>
-	<td><?php echo $coaching_info_courses_name; ?></td>
+	<td><?php echo $school_info_class_name; ?></td>
 	<td><?php echo $student_date_of_admission; ?></td>
 	<td><?php echo $update_change; ?></td>
     <td><?php echo $last_updated_date; ?></td>

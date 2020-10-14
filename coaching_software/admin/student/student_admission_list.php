@@ -157,7 +157,7 @@ $all_subject[$coaching_info_courses_subject_code]=$coaching_info_courses_subject
 }
   
   
-$query="select * from coaching_courses where courses_status='Active'";
+$query="select * from school_info_class_info where courses_status='Active'";
 $run1=mysqli_query($conn37,$query);
 $all_courses_name='';
 while($row1=mysqli_fetch_assoc($run1)){

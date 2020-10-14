@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "coaching_pro";
+$db = "bluemorpho";
 // Create connection
 $conn37 = mysqli_connect($servername, $username, $password, $db);
 

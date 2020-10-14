@@ -198,8 +198,8 @@ e.preventDefault();
     <div class="box-body">
 
 	<?php
-	$s_no=$_GET['s_no'];	
-	$que="select * from registration_details where s_no='$s_no' and student_status=' ' and session_value='$session1'";
+	 $s_no=$_GET['s_no'];	
+	 $que="select * from registration_details where s_no='$s_no' and student_status=' ' and session_value='$session1'";
 		$run=mysqli_query($conn37,$que);
 		while($row=mysqli_fetch_assoc($run)){
 		$student_registration_number=$row['student_registration_number'];
@@ -275,7 +275,7 @@ e.preventDefault();
 
 
 						<?php
-						$que="select * from coaching_courses";
+						$que="select * from school_info_class_info";
 						$run=mysqli_query($conn37,$que);
 						while($row=mysqli_fetch_assoc($run)){
 						$s_no = $row['s_no'];

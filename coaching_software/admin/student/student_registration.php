@@ -274,7 +274,7 @@ while($row=mysqli_fetch_assoc($run)){
 
 
 						<?php
-						$que="select * from coaching_courses";
+						$que="select * from school_info_class_info";
 						$run=mysqli_query($conn37,$que);
 						while($row=mysqli_fetch_assoc($run)){
 						$s_no = $row['s_no'];
